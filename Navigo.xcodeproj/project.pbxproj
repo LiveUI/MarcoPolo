@@ -61,7 +61,7 @@
 		15A1172F20C728DD00CE4263 /* Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15A1173E20C7292D00CE4263 /* NavCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A1173E20C7292D00CE4263 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1174020C7292D00CE4263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A1174220C7292D00CE4263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15A1174720C7292F00CE4263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		15A1182A20C81A0800CE4263 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15A1182B20C81A0800CE4263 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
-		15A1182C20C81A0800CE4263 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		15A1182C20C81A0800CE4263 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		15A1182D20C81A0800CE4263 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		484691D076CA1EA3E421D5A8 /* Pods-NavCon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NavCon/Pods-NavCon.debug.xcconfig"; sourceTree = "<group>"; };
 		BAC8BB8931F51D6E586D0C33 /* Pods_NavCon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavCon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				15A1182920C819F400CE4263 /* Configuration */,
-				15A1173F20C7292D00CE4263 /* NavCon */,
+				15A1173F20C7292D00CE4263 /* Demo */,
 				15A1173120C728DD00CE4263 /* Navigo */,
 				15A1173020C728DD00CE4263 /* Products */,
 				25D97EA597B488B0FDEDB85B /* Pods */,
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				15A1172F20C728DD00CE4263 /* Navigo.framework */,
-				15A1173E20C7292D00CE4263 /* NavCon.app */,
+				15A1173E20C7292D00CE4263 /* Navigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 			path = Navigo;
 			sourceTree = "<group>";
 		};
-		15A1173F20C7292D00CE4263 /* NavCon */ = {
+		15A1173F20C7292D00CE4263 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				15A1177020C7E2CB00CE4263 /* Extensions */,
@@ -159,7 +159,7 @@
 				15A1175020C7293D00CE4263 /* Supporting files */,
 				15A1174020C7292D00CE4263 /* AppDelegate.swift */,
 			);
-			path = NavCon;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		15A1175020C7293D00CE4263 /* Supporting files */ = {
@@ -291,9 +291,9 @@
 			productReference = 15A1172F20C728DD00CE4263 /* Navigo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		15A1173D20C7292D00CE4263 /* NavCon */ = {
+		15A1173D20C7292D00CE4263 /* Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "NavCon" */;
+			buildConfigurationList = 15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
 				7F19C867470CBA89C3A67288 /* [CP] Check Pods Manifest.lock */,
 				15A1173A20C7292D00CE4263 /* Sources */,
@@ -307,9 +307,9 @@
 			dependencies = (
 				15A1175820C72A6000CE4263 /* PBXTargetDependency */,
 			);
-			name = NavCon;
+			name = Demo;
 			productName = NavCon;
-			productReference = 15A1173E20C7292D00CE4263 /* NavCon.app */;
+			productReference = 15A1173E20C7292D00CE4263 /* Navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -344,7 +344,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15A1173D20C7292D00CE4263 /* NavCon */,
+				15A1173D20C7292D00CE4263 /* Demo */,
 				15A1172E20C728DD00CE4263 /* Navigo */,
 			);
 		};
@@ -378,12 +378,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NavCon/Pods-NavCon-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Presentables/Presentables.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentables.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,6 +520,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -578,6 +577,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -597,12 +597,15 @@
 				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -620,11 +623,14 @@
 				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -636,12 +642,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8ZGADY96;
-				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
+				INFOPLIST_FILE = "Demo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_NAME = Navigation;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -653,12 +661,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8ZGADY96;
-				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
+				INFOPLIST_FILE = "Demo/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_NAME = Navigation;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -684,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "NavCon" */ = {
+		15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15A1174E20C7292F00CE4263 /* Debug */,
