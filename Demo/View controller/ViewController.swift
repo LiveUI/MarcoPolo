@@ -20,10 +20,10 @@ class ViewController: UIViewController {
         if #available(iOS 11.0, *) {
             safeAreaLabel.text = """
             Safe area:
-                - top: \(view.safeAreaInsets.top + additionalSafeAreaInsets.top)
-                - left: \(view.safeAreaInsets.left + additionalSafeAreaInsets.left)
-                - right: \(view.safeAreaInsets.right + additionalSafeAreaInsets.right)
-                - bottom: \(view.safeAreaInsets.bottom + additionalSafeAreaInsets.bottom)
+                - top: \(view.safeAreaInsets.top)
+                - left: \(view.safeAreaInsets.left)
+                - right: \(view.safeAreaInsets.right)
+                - bottom: \(view.safeAreaInsets.bottom)
             """
         }
     }

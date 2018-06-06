@@ -16,4 +16,6 @@ class NavigationManager {
     
     var animation: Animation = .default()
     
+    
+    
 }

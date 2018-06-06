@@ -24,6 +24,7 @@ extension NavigationViewController {
                 return 0.0
         }
         
+        // TODO: Add shadow on lower screen!!!
         if upperManager.animation.storage == .bounce {
             lowerLeftConstraint.constant = -(view.bounds.size.width / 2)
             upperLeftConstraint.constant = 0
@@ -81,6 +82,7 @@ extension NavigationViewController {
         newLeftConstraint.constant = view.bounds.size.width
         view.layoutIfNeeded()
         
+        // TODO: Add shadow on lower screen!!!
         if newManager.animation.storage == .bounce {
             newLeftConstraint.constant = -12
             previousLeftConstraint.constant = -(view.bounds.size.width / 2)

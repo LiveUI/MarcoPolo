@@ -12,15 +12,7 @@
 
 open class NavigationBar: UIView {
     
-    public enum Style {
-        
-        case title
-        
-        case titleSubtitle
-        
-    }
-    
-    public var style: Style
+    public var navigationItem: NavigationItem!
     
     var navigationBarHeight: NSLayoutConstraint!
     
@@ -34,10 +26,6 @@ open class NavigationBar: UIView {
     
     public var backgroundView = UIView()
     
-    public func set(style: Style, animated: Bool) {
-        self.style = style
-    }
-    
     // MARK: Layout
     
     @available(*, unavailable, message: "Method unavailable")
@@ -47,13 +35,12 @@ open class NavigationBar: UIView {
     
     // MARK: Initialization
     
-    public init(_ style: Style = .title, height: CGFloat = 64.0) {
-        self.style = style
-        
+    public init(height: CGFloat = 64.0) {
         self.height = height
         
         super.init(frame: .zero)
         
+        navigationItem = NavigationItem(self)
         backgroundColor = .lightGray
     }
     

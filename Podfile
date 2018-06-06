@@ -2,7 +2,7 @@
 platform :ios, '10.3'
 
 
-target 'NavCon' do
+target 'Demo' do
     use_frameworks!
     
     pod 'Presentables', '~> 0.6.7'

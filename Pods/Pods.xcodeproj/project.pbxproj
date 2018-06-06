@@ -7,108 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		018C11F9707B6FE20FC01345A7E07C12 /* PresentableTableViewManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F4A04D33A40ADF200AD486ED9E095 /* PresentableTableViewManageable.swift */; };
-		0EA57807CD07B930F73649BBA272EE41 /* Presentables-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9B3EE7E2A09848CE35A3438452804 /* Presentables-dummy.m */; };
-		19C071DBBB0F0F72299E153ED1E7C501 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989784F4145ABD12DBC742E8121F1C6 /* Presentable.swift */; };
-		23E5B737AD67922C4E01DEBCD1FB1FDE /* Pods-NavCon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F715C1065B159B9CE4DC98A68ACDCD /* Pods-NavCon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4ECFDFB9CE17855F7BC7813768A41CED /* PresentableTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF284308413F348A87B99E44811909E /* PresentableTableViewDataManager.swift */; };
-		6050FCB44F38A686E06C43604FE9C211 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E437F818F455AD03CEAD7923E08B2 /* PresentableSection.swift */; };
-		67EB49653A46819D9FF510FD124DFF6F /* Array+Presentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CD03E819E2751C651C77C780B37E9 /* Array+Presentables.swift */; };
-		72704E759ECB54B8CD24661E9871C253 /* Presentables+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537B93648BD9203F8F3062D0C7FD402 /* Presentables+UICollectionView.swift */; };
-		7607E39173AE037F5DD95BB0A34D4953 /* Pods-NavCon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1504DB1CFF3D9D704A763F2CA688B8A8 /* Pods-NavCon-dummy.m */; };
-		886D37828A435CF94A6A6D8BBEAB11CD /* UICollectionView+Presentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805E28B9BFCB7636BDD359A3ACFDC9D2 /* UICollectionView+Presentables.swift */; };
-		8BCE467DAD3D367F9F89143DBB4312CF /* PresentableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917317066F74CFF55730135AADB22BC1 /* PresentableTableViewController.swift */; };
-		9930BA3C6F6516ED005036AB06280448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9DC7CB580AAC61CC056F2E26802E30DD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE21A09611B488824E8E5543C8765C /* Observable.swift */; };
-		9E8B89D381DE39A9A134891048F79256 /* PresentableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172938F0CEAEA0DA876E8C4074DE316 /* PresentableManager.swift */; };
-		A6B8A5005A9479FAD3903323CAAE69A4 /* PresentableCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E4C1ACCFD32F913753AF5F3B622BD /* PresentableCollectionElement.swift */; };
-		A756DAD976F267C6F56660573C942340 /* Presentables+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB607DF0B013A6BBBD974797F36602F /* Presentables+UITableView.swift */; };
-		A8B4E97C0D8C4C2742ACA68AEA97C6E6 /* Presentables-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1DE7F999D976499C18341951C075F77 /* Presentables-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7794D13A251AF7530B262A3D8FF0E32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C47EA7F1CCCEFFF796E34B9E0BC2A178 /* PresentableCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174DC400C28536E3538DC9E0E58E3959 /* PresentableCollectionViewDataManager.swift */; };
+		01326F5627F67ED407FB00FBED4341FB /* PresentableCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E4C1ACCFD32F913753AF5F3B622BD /* PresentableCollectionElement.swift */; };
+		024CE4676A31FCC0B142219076DBB551 /* UICollectionView+Presentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805E28B9BFCB7636BDD359A3ACFDC9D2 /* UICollectionView+Presentables.swift */; };
+		1722C300C9B9D286A0FA9BB994A5EC35 /* PresentableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917317066F74CFF55730135AADB22BC1 /* PresentableTableViewController.swift */; };
+		23B626481D3A6A13D2AD31F9A8CF9701 /* Presentables+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB607DF0B013A6BBBD974797F36602F /* Presentables+UITableView.swift */; };
+		2E77709362EF840001A74A3DBAFB19DF /* PresentableTableViewManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F4A04D33A40ADF200AD486ED9E095 /* PresentableTableViewManageable.swift */; };
+		367CE800B14B385F245E3DF9E084E8B4 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989784F4145ABD12DBC742E8121F1C6 /* Presentable.swift */; };
+		4D89AE272662A11E760E4AC7938CE3BB /* PresentableTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF284308413F348A87B99E44811909E /* PresentableTableViewDataManager.swift */; };
+		5E62F3E6D348128AFBDFA514C29BB198 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3E437F818F455AD03CEAD7923E08B2 /* PresentableSection.swift */; };
+		65CBA3E4417A895A8737D433E513BA44 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A6584B81F4197BC4DF29B1F8C1F51F7 /* PresentableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172938F0CEAEA0DA876E8C4074DE316 /* PresentableManager.swift */; };
+		6F41DAE335DADA6628A06DCF99263DF9 /* Presentables-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1DE7F999D976499C18341951C075F77 /* Presentables-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76F5F6CE39045F38344E816F679EA71B /* PresentableCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174DC400C28536E3538DC9E0E58E3959 /* PresentableCollectionViewDataManager.swift */; };
+		89088A4A7AA0163AC8B23B1FA6E42139 /* Presentables+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537B93648BD9203F8F3062D0C7FD402 /* Presentables+UICollectionView.swift */; };
+		8C4023434023F15416D5FCD761C3EB6A /* Array+Presentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CD03E819E2751C651C77C780B37E9 /* Array+Presentables.swift */; };
+		91FB4BC28BAF232F457FEFA07C324AF6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE21A09611B488824E8E5543C8765C /* Observable.swift */; };
+		AD6180C9E5FCD3A0B30E75DEE7D33D61 /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */; };
+		CC45B0CAD324F6A7DD6F8A2C1DF6B4A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D3ECB7BD7D4EA0BCF82437E5D83680BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F4A5A1FAD659B33FFE38509C886C453C /* Presentables-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9B3EE7E2A09848CE35A3438452804 /* Presentables-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		079C2B27C66A83BFF0326006A94411FC /* PBXContainerItemProxy */ = {
+		4EF82BE46A838B144219E968FB3B5CB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3042CEBCC97DE0AE366C9B31D1BDAA6C;
+			remoteGlobalIDString = 100BD2125ABC28B922C4AE527097399F;
 			remoteInfo = Presentables;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0465DEF97053DA9A72C224D7877585F8 /* Pods-NavCon-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NavCon-acknowledgements.markdown"; sourceTree = "<group>"; };
 		048B12074B6E7F0887DA44AF2F317BB8 /* Presentables.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presentables.xcconfig; sourceTree = "<group>"; };
-		0975E57CCF6B979ADEB76AB514E6ECAB /* Pods-NavCon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NavCon.debug.xcconfig"; sourceTree = "<group>"; };
-		1504DB1CFF3D9D704A763F2CA688B8A8 /* Pods-NavCon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NavCon-dummy.m"; sourceTree = "<group>"; };
+		1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
 		174DC400C28536E3538DC9E0E58E3959 /* PresentableCollectionViewDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableCollectionViewDataManager.swift; path = "Presentables/Classes/Collection views/PresentableCollectionViewDataManager.swift"; sourceTree = "<group>"; };
+		1965FF76BB91163730C384D7B1E2C4FB /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
 		2172938F0CEAEA0DA876E8C4074DE316 /* PresentableManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableManager.swift; path = Presentables/Classes/Protocols/PresentableManager.swift; sourceTree = "<group>"; };
-		2C82F61EE6640A5979B5527AF41C2157 /* Pods_NavCon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NavCon.framework; path = "Pods-NavCon.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
+		282ECFCD0084F94EC1DED9401AAFE7F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FF284308413F348A87B99E44811909E /* PresentableTableViewDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableTableViewDataManager.swift; path = "Presentables/Classes/Table views/PresentableTableViewDataManager.swift"; sourceTree = "<group>"; };
 		3BF9B3EE7E2A09848CE35A3438452804 /* Presentables-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presentables-dummy.m"; sourceTree = "<group>"; };
 		3EB607DF0B013A6BBBD974797F36602F /* Presentables+UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentables+UITableView.swift"; path = "Presentables/Classes/Table views/Presentables+UITableView.swift"; sourceTree = "<group>"; };
-		581F23C547F16D6E4C32E9BC49174D1A /* Pods-NavCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NavCon.release.xcconfig"; sourceTree = "<group>"; };
+		5AE38B88805C6BE465FE0098EADB1187 /* Presentables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presentables.framework; path = Presentables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3E437F818F455AD03CEAD7923E08B2 /* PresentableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableSection.swift; path = Presentables/Classes/Libs/PresentableSection.swift; sourceTree = "<group>"; };
-		615E91C444C94C7F0064A4810EAC0576 /* Presentables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presentables.framework; path = Presentables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61A21225250497ADB5A6EF265F2E0757 /* Pods-NavCon-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NavCon-frameworks.sh"; sourceTree = "<group>"; };
+		5EFCFC4782B9646B842EB839A267D7AA /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		678E1BAADCB41700457B2E6E1D5B0D39 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Demo.framework; path = "Pods-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6989784F4145ABD12DBC742E8121F1C6 /* Presentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presentable.swift; path = Presentables/Classes/Libs/Presentable.swift; sourceTree = "<group>"; };
+		7A01701031823CCAC30B58767A21D8A4 /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
 		7C5CD03E819E2751C651C77C780B37E9 /* Array+Presentables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Presentables.swift"; path = "Presentables/Classes/Helpers/Array+Presentables.swift"; sourceTree = "<group>"; };
 		805E28B9BFCB7636BDD359A3ACFDC9D2 /* UICollectionView+Presentables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Presentables.swift"; path = "Presentables/Classes/Collection views/UICollectionView+Presentables.swift"; sourceTree = "<group>"; };
 		8B5589A44797D6928CE9BC4B20D46C65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9154BF16DC759A1EDD6A1AB4E22AA07D /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		917317066F74CFF55730135AADB22BC1 /* PresentableTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableTableViewController.swift; path = "Presentables/Classes/Table views/PresentableTableViewController.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1DE7F999D976499C18341951C075F77 /* Presentables-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentables-umbrella.h"; sourceTree = "<group>"; };
+		A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A537B93648BD9203F8F3062D0C7FD402 /* Presentables+UICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentables+UICollectionView.swift"; path = "Presentables/Classes/Collection views/Presentables+UICollectionView.swift"; sourceTree = "<group>"; };
-		A819E0EFFBEF07E5C43F1E7869745FFD /* Pods-NavCon-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NavCon-resources.sh"; sourceTree = "<group>"; };
 		C1CE21A09611B488824E8E5543C8765C /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Presentables/Classes/Libs/Observable.swift; sourceTree = "<group>"; };
-		C4F715C1065B159B9CE4DC98A68ACDCD /* Pods-NavCon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NavCon-umbrella.h"; sourceTree = "<group>"; };
 		C78E4C1ACCFD32F913753AF5F3B622BD /* PresentableCollectionElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableCollectionElement.swift; path = Presentables/Classes/Protocols/PresentableCollectionElement.swift; sourceTree = "<group>"; };
-		D2E15DA1C3170FF4EB323AE48ED81050 /* Pods-NavCon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NavCon.modulemap"; sourceTree = "<group>"; };
-		D91DB288928B480E63C57D6E9651EEE6 /* Pods-NavCon-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NavCon-acknowledgements.plist"; sourceTree = "<group>"; };
 		D92A1BCAAFF7D2D6EBFB5C56CBD1D187 /* Presentables-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentables-prefix.pch"; sourceTree = "<group>"; };
 		DB4F4A04D33A40ADF200AD486ED9E095 /* PresentableTableViewManageable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableTableViewManageable.swift; path = "Presentables/Classes/Table views/PresentableTableViewManageable.swift"; sourceTree = "<group>"; };
-		E4E4F7BC3473BF5BED8EDE4B89B76648 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB2BD00EE3F4FBA187EE15A5C9968F90 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
 		F53FE963FEB28F0DC58C8D32C7A7D7C7 /* Presentables.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Presentables.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04DC5C27714C80AF52E797F5B4E6EC41 /* Frameworks */ = {
+		36FDF0FE7C0FD27556C1DBCB3357CAE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7794D13A251AF7530B262A3D8FF0E32 /* Foundation.framework in Frameworks */,
+				D3ECB7BD7D4EA0BCF82437E5D83680BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EAB92B1E317A21AFD93C32E85A74488 /* Frameworks */ = {
+		8AE0703090B9C9D8EC33D0B01808150C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9930BA3C6F6516ED005036AB06280448 /* Foundation.framework in Frameworks */,
+				CC45B0CAD324F6A7DD6F8A2C1DF6B4A2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05E104D7916DC30590445D211AF6C24F /* Targets Support Files */ = {
+		6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8A2D2FD265C2055EE9B8C00BEF07CF3 /* Pods-NavCon */,
+				CF58A9AAA805FDF37F67723722F14D8F /* Pods-Demo */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		4E6DE375E2ED44AC92A71FB79E16E72B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2C82F61EE6640A5979B5527AF41C2157 /* Pods_NavCon.framework */,
-				615E91C444C94C7F0064A4810EAC0576 /* Presentables.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -117,8 +108,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				8238239B09FD3619D7DD883810E7D45D /* Pods */,
-				4E6DE375E2ED44AC92A71FB79E16E72B /* Products */,
-				05E104D7916DC30590445D211AF6C24F /* Targets Support Files */,
+				C760E324170E33E747E223D28C3A7109 /* Products */,
+				6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +151,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C760E324170E33E747E223D28C3A7109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				678E1BAADCB41700457B2E6E1D5B0D39 /* Pods_Demo.framework */,
+				5AE38B88805C6BE465FE0098EADB1187 /* Presentables.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CD020FA0FB02E80525ED17BC6969A880 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +174,24 @@
 			path = "../Target Support Files/Presentables";
 			sourceTree = "<group>";
 		};
+		CF58A9AAA805FDF37F67723722F14D8F /* Pods-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				282ECFCD0084F94EC1DED9401AAFE7F5 /* Info.plist */,
+				7A01701031823CCAC30B58767A21D8A4 /* Pods-Demo.modulemap */,
+				9154BF16DC759A1EDD6A1AB4E22AA07D /* Pods-Demo-acknowledgements.markdown */,
+				EB2BD00EE3F4FBA187EE15A5C9968F90 /* Pods-Demo-acknowledgements.plist */,
+				1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */,
+				1965FF76BB91163730C384D7B1E2C4FB /* Pods-Demo-frameworks.sh */,
+				5EFCFC4782B9646B842EB839A267D7AA /* Pods-Demo-resources.sh */,
+				27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */,
+				A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */,
+				275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */,
+			);
+			name = "Pods-Demo";
+			path = "Target Support Files/Pods-Demo";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,53 +200,35 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F8A2D2FD265C2055EE9B8C00BEF07CF3 /* Pods-NavCon */ = {
-			isa = PBXGroup;
-			children = (
-				E4E4F7BC3473BF5BED8EDE4B89B76648 /* Info.plist */,
-				D2E15DA1C3170FF4EB323AE48ED81050 /* Pods-NavCon.modulemap */,
-				0465DEF97053DA9A72C224D7877585F8 /* Pods-NavCon-acknowledgements.markdown */,
-				D91DB288928B480E63C57D6E9651EEE6 /* Pods-NavCon-acknowledgements.plist */,
-				1504DB1CFF3D9D704A763F2CA688B8A8 /* Pods-NavCon-dummy.m */,
-				61A21225250497ADB5A6EF265F2E0757 /* Pods-NavCon-frameworks.sh */,
-				A819E0EFFBEF07E5C43F1E7869745FFD /* Pods-NavCon-resources.sh */,
-				C4F715C1065B159B9CE4DC98A68ACDCD /* Pods-NavCon-umbrella.h */,
-				0975E57CCF6B979ADEB76AB514E6ECAB /* Pods-NavCon.debug.xcconfig */,
-				581F23C547F16D6E4C32E9BC49174D1A /* Pods-NavCon.release.xcconfig */,
-			);
-			name = "Pods-NavCon";
-			path = "Target Support Files/Pods-NavCon";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1D7E560415FAB95B0034266C4F5085A5 /* Headers */ = {
+		4EE3E00E0B80A17C297DD06BE341F2B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8B4E97C0D8C4C2742ACA68AEA97C6E6 /* Presentables-umbrella.h in Headers */,
+				6F41DAE335DADA6628A06DCF99263DF9 /* Presentables-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		838482717B6705F90AD81ADA4AD6EBA4 /* Headers */ = {
+		C07390E4086BE0B0DBB7C854A0C1A926 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E5B737AD67922C4E01DEBCD1FB1FDE /* Pods-NavCon-umbrella.h in Headers */,
+				65CBA3E4417A895A8737D433E513BA44 /* Pods-Demo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3042CEBCC97DE0AE366C9B31D1BDAA6C /* Presentables */ = {
+		100BD2125ABC28B922C4AE527097399F /* Presentables */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7D5146B77A0E1B8C34667EDA322D81D /* Build configuration list for PBXNativeTarget "Presentables" */;
+			buildConfigurationList = 10A12E0F7D6984854DFD8C84239F22EB /* Build configuration list for PBXNativeTarget "Presentables" */;
 			buildPhases = (
-				FCD3DCEE60C51D120BFF0164CF15C8E9 /* Sources */,
-				04DC5C27714C80AF52E797F5B4E6EC41 /* Frameworks */,
-				1D7E560415FAB95B0034266C4F5085A5 /* Headers */,
+				179EA0DF1859E7496E63D1DF004B6D0C /* Sources */,
+				36FDF0FE7C0FD27556C1DBCB3357CAE9 /* Frameworks */,
+				4EE3E00E0B80A17C297DD06BE341F2B6 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -236,25 +236,25 @@
 			);
 			name = Presentables;
 			productName = Presentables;
-			productReference = 615E91C444C94C7F0064A4810EAC0576 /* Presentables.framework */;
+			productReference = 5AE38B88805C6BE465FE0098EADB1187 /* Presentables.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		42D86DDD13881BB4044707ACAA650F26 /* Pods-NavCon */ = {
+		6C4DF6D0A6652B0A393CE249CE87F16C /* Pods-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9F3846FA48718ED5F0BDA09362E52B3 /* Build configuration list for PBXNativeTarget "Pods-NavCon" */;
+			buildConfigurationList = ED9A0581D498B4208322B927A42BFDCE /* Build configuration list for PBXNativeTarget "Pods-Demo" */;
 			buildPhases = (
-				28AD48759E7A440B3D3AA9310C7E0B58 /* Sources */,
-				6EAB92B1E317A21AFD93C32E85A74488 /* Frameworks */,
-				838482717B6705F90AD81ADA4AD6EBA4 /* Headers */,
+				53C6EF38648E5F95DDAFE6A7FBEDF174 /* Sources */,
+				8AE0703090B9C9D8EC33D0B01808150C /* Frameworks */,
+				C07390E4086BE0B0DBB7C854A0C1A926 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B18A6DAE2E9669F6CEE200A8B3CD9CA3 /* PBXTargetDependency */,
+				068199752246B687BDC04F448B16E6F3 /* PBXTargetDependency */,
 			);
-			name = "Pods-NavCon";
-			productName = "Pods-NavCon";
-			productReference = 2C82F61EE6640A5979B5527AF41C2157 /* Pods_NavCon.framework */;
+			name = "Pods-Demo";
+			productName = "Pods-Demo";
+			productReference = 678E1BAADCB41700457B2E6E1D5B0D39 /* Pods_Demo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -274,61 +274,95 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4E6DE375E2ED44AC92A71FB79E16E72B /* Products */;
+			productRefGroup = C760E324170E33E747E223D28C3A7109 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42D86DDD13881BB4044707ACAA650F26 /* Pods-NavCon */,
-				3042CEBCC97DE0AE366C9B31D1BDAA6C /* Presentables */,
+				6C4DF6D0A6652B0A393CE249CE87F16C /* Pods-Demo */,
+				100BD2125ABC28B922C4AE527097399F /* Presentables */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		28AD48759E7A440B3D3AA9310C7E0B58 /* Sources */ = {
+		179EA0DF1859E7496E63D1DF004B6D0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7607E39173AE037F5DD95BB0A34D4953 /* Pods-NavCon-dummy.m in Sources */,
+				8C4023434023F15416D5FCD761C3EB6A /* Array+Presentables.swift in Sources */,
+				91FB4BC28BAF232F457FEFA07C324AF6 /* Observable.swift in Sources */,
+				367CE800B14B385F245E3DF9E084E8B4 /* Presentable.swift in Sources */,
+				01326F5627F67ED407FB00FBED4341FB /* PresentableCollectionElement.swift in Sources */,
+				76F5F6CE39045F38344E816F679EA71B /* PresentableCollectionViewDataManager.swift in Sources */,
+				6A6584B81F4197BC4DF29B1F8C1F51F7 /* PresentableManager.swift in Sources */,
+				89088A4A7AA0163AC8B23B1FA6E42139 /* Presentables+UICollectionView.swift in Sources */,
+				23B626481D3A6A13D2AD31F9A8CF9701 /* Presentables+UITableView.swift in Sources */,
+				F4A5A1FAD659B33FFE38509C886C453C /* Presentables-dummy.m in Sources */,
+				5E62F3E6D348128AFBDFA514C29BB198 /* PresentableSection.swift in Sources */,
+				1722C300C9B9D286A0FA9BB994A5EC35 /* PresentableTableViewController.swift in Sources */,
+				4D89AE272662A11E760E4AC7938CE3BB /* PresentableTableViewDataManager.swift in Sources */,
+				2E77709362EF840001A74A3DBAFB19DF /* PresentableTableViewManageable.swift in Sources */,
+				024CE4676A31FCC0B142219076DBB551 /* UICollectionView+Presentables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCD3DCEE60C51D120BFF0164CF15C8E9 /* Sources */ = {
+		53C6EF38648E5F95DDAFE6A7FBEDF174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67EB49653A46819D9FF510FD124DFF6F /* Array+Presentables.swift in Sources */,
-				9DC7CB580AAC61CC056F2E26802E30DD /* Observable.swift in Sources */,
-				19C071DBBB0F0F72299E153ED1E7C501 /* Presentable.swift in Sources */,
-				A6B8A5005A9479FAD3903323CAAE69A4 /* PresentableCollectionElement.swift in Sources */,
-				C47EA7F1CCCEFFF796E34B9E0BC2A178 /* PresentableCollectionViewDataManager.swift in Sources */,
-				9E8B89D381DE39A9A134891048F79256 /* PresentableManager.swift in Sources */,
-				72704E759ECB54B8CD24661E9871C253 /* Presentables+UICollectionView.swift in Sources */,
-				A756DAD976F267C6F56660573C942340 /* Presentables+UITableView.swift in Sources */,
-				0EA57807CD07B930F73649BBA272EE41 /* Presentables-dummy.m in Sources */,
-				6050FCB44F38A686E06C43604FE9C211 /* PresentableSection.swift in Sources */,
-				8BCE467DAD3D367F9F89143DBB4312CF /* PresentableTableViewController.swift in Sources */,
-				4ECFDFB9CE17855F7BC7813768A41CED /* PresentableTableViewDataManager.swift in Sources */,
-				018C11F9707B6FE20FC01345A7E07C12 /* PresentableTableViewManageable.swift in Sources */,
-				886D37828A435CF94A6A6D8BBEAB11CD /* UICollectionView+Presentables.swift in Sources */,
+				AD6180C9E5FCD3A0B30E75DEE7D33D61 /* Pods-Demo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B18A6DAE2E9669F6CEE200A8B3CD9CA3 /* PBXTargetDependency */ = {
+		068199752246B687BDC04F448B16E6F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Presentables;
-			target = 3042CEBCC97DE0AE366C9B31D1BDAA6C /* Presentables */;
-			targetProxy = 079C2B27C66A83BFF0326006A94411FC /* PBXContainerItemProxy */;
+			target = 100BD2125ABC28B922C4AE527097399F /* Presentables */;
+			targetProxy = 4EF82BE46A838B144219E968FB3B5CB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E2E99287F9BDFE1232DA27B0B80B710 /* Debug */ = {
+		322551886F013DEECEFC5F950BA1D8EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0975E57CCF6B979ADEB76AB514E6ECAB /* Pods-NavCon.debug.xcconfig */;
+			baseConfigurationReference = 048B12074B6E7F0887DA44AF2F317BB8 /* Presentables.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Presentables/Presentables-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Presentables/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Presentables/Presentables.modulemap";
+				PRODUCT_MODULE_NAME = Presentables;
+				PRODUCT_NAME = Presentables;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		444C45FEEE8094469BFD5379789B148C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -341,12 +375,81 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NavCon/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NavCon/Pods-NavCon.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B059FDB110F2AC27634B2FA5C6AEF09F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048B12074B6E7F0887DA44AF2F317BB8 /* Presentables.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Presentables/Presentables-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Presentables/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Presentables/Presentables.modulemap";
+				PRODUCT_MODULE_NAME = Presentables;
+				PRODUCT_NAME = Presentables;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C81C26B8CDC1B930074586E95F8BA883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -361,109 +464,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		26A45332F94CC53300DD916215FDFD42 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 048B12074B6E7F0887DA44AF2F317BB8 /* Presentables.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Presentables/Presentables-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentables/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Presentables/Presentables.modulemap";
-				PRODUCT_MODULE_NAME = Presentables;
-				PRODUCT_NAME = Presentables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2C26987F12F466A9EF89506CFDC26AE4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 048B12074B6E7F0887DA44AF2F317BB8 /* Presentables.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Presentables/Presentables-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentables/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Presentables/Presentables.modulemap";
-				PRODUCT_MODULE_NAME = Presentables;
-				PRODUCT_NAME = Presentables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		54B315C69B67064DDCDE3733AF76E06E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 581F23C547F16D6E4C32E9BC49174D1A /* Pods-NavCon.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NavCon/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NavCon/Pods-NavCon.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		CE6BB864FB202B78BB66ACCAACAA0513 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -589,6 +589,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		10A12E0F7D6984854DFD8C84239F22EB /* Build configuration list for PBXNativeTarget "Presentables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B059FDB110F2AC27634B2FA5C6AEF09F /* Debug */,
+				322551886F013DEECEFC5F950BA1D8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -598,20 +607,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7D5146B77A0E1B8C34667EDA322D81D /* Build configuration list for PBXNativeTarget "Presentables" */ = {
+		ED9A0581D498B4208322B927A42BFDCE /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C26987F12F466A9EF89506CFDC26AE4 /* Debug */,
-				26A45332F94CC53300DD916215FDFD42 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9F3846FA48718ED5F0BDA09362E52B3 /* Build configuration list for PBXNativeTarget "Pods-NavCon" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E2E99287F9BDFE1232DA27B0B80B710 /* Debug */,
-				54B315C69B67064DDCDE3733AF76E06E /* Release */,
+				C81C26B8CDC1B930074586E95F8BA883 /* Debug */,
+				444C45FEEE8094469BFD5379789B148C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
