@@ -11,14 +11,14 @@ import Foundation
 
 public class NavigationItem {
     
-    var navigationBar: NavigationBar
+    var navigationBar: UINavigationBar!
     
     public var prompt: String?
     public var title: String?
     public var subtitle: String?
     
-    init(_ navigationBar: NavigationBar) {
-        self.navigationBar = navigationBar
+    init() {
+        
     }
     
 }

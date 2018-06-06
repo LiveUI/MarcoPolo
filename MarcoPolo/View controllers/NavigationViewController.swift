@@ -41,7 +41,7 @@ open class NavigationViewController: UIViewController {
         if #available(iOS 11.0, *) {
             safeAreaTop = view.safeAreaInsets.top + 44.0
         }
-        navigationBar = NavigationBar(height: (safeAreaTop + 44.0))
+        navigationBar = NavigationBar(minHeight: (safeAreaTop + 84.0))
         view.addSubview(navigationBar)
         navigationBar.layout.pinHorizontalEdgesToSuperView()
         navigationBarYPosition = navigationBar.layout.pinTopToSuperview()

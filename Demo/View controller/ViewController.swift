@@ -10,83 +10,65 @@ import UIKit
 import Presentables
 
 
-class ViewController: UIViewController {
+class ViewController: PresentableTableViewController {
     
     let level: Int
     
-    let safeAreaLabel = UILabel()
-    
-    func updateSafeArea() {
-        if #available(iOS 11.0, *) {
-            safeAreaLabel.text = """
-            Safe area:
-                - top: \(view.safeAreaInsets.top)
-                - left: \(view.safeAreaInsets.left)
-                - right: \(view.safeAreaInsets.right)
-                - bottom: \(view.safeAreaInsets.bottom)
-            """
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        updateSafeArea()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .random
-        
-        updateSafeArea()
-        
-        safeAreaLabel.frame = CGRect(x: 50, y: 100, width: 300, height: 200)
-        safeAreaLabel.numberOfLines = 0
-        safeAreaLabel.textColor = .white
-        safeAreaLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        view.addSubview(safeAreaLabel)
-        
-        let push = UIButton(frame: CGRect(x: 50, y: 260, width: 150, height: 44))
-        push.setTitleColor(push.tintColor, for: .normal)
-        push.setTitle("Push to level: \((level + 1))", for: .normal)
-        push.addTarget(self, action: #selector(pushNewController(_:)), for: .touchUpInside)
-        push.layer.borderWidth = 1
-        push.layer.borderColor = push.tintColor.cgColor
-        push.layer.cornerRadius = 5
-        view.addSubview(push)
-        
-        if level > 0 {
-            let pop = UIButton(frame: CGRect(x: 50, y: 310, width: 150, height: 44))
-            pop.setTitleColor(pop.tintColor, for: .normal)
-            pop.setTitle("Pop to level: \((level - 1))", for: .normal)
-            pop.addTarget(self, action: #selector(popController(_:)), for: .touchUpInside)
-            pop.layer.borderWidth = 1
-            pop.layer.borderColor = pop.tintColor.cgColor
-            pop.layer.cornerRadius = 5
-            view.addSubview(pop)
+        if #available(iOS 11.0, *) {
+            let infoSection = PresentableSection()
+            infoSection.append(Presentable<UITableViewCell>.create({ cell in
+                cell.textLabel?.numberOfLines = 0
+                cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+                cell.textLabel?.text = """
+                Safe area:
+                    - top: \(self.view.safeAreaInsets.top)
+                    - left: \(self.view.safeAreaInsets.left)
+                    - right: \(self.view.safeAreaInsets.right)
+                    - bottom: \(self.view.safeAreaInsets.bottom)
+                """
+            }))
+            data.append(infoSection)
         }
-    }
-    
-    // MARK: Actions
-    
-    @objc func pushNewController(_ sender: UIButton) {
-        navigationViewController?.push(viewController: ViewController(level + 1), animation: .paralax())
-    }
-    
-    @objc func popController(_ sender: UIButton) {
-        navigationViewController?.popViewController(animation: .bounce)
+        
+        let section = PresentableSection()
+        section.append(Presentable<UITableViewCell>.create({ cell in
+            cell.textLabel?.text = "Push to level: \((self.level + 1))"
+            cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+            cell.accessoryType = .disclosureIndicator
+        }).cellSelected {
+            self.navigationViewController?.push(viewController: ViewController(self.level + 1), animation: .bounce)
+        })
+        if level > 0 {
+            section.append(Presentable<UITableViewCell>.create({ cell in
+                cell.textLabel?.text = "Pop to level: \((self.level - 1))"
+                cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+                cell.accessoryType = .disclosureIndicator
+            }).cellSelected {
+                self.navigationViewController?.popViewController(animation: .bounce)
+            })
+        }
+        data.append(section)
+        
+        presentableManager.selectedCell = { info in
+            info.tableView.deselectRow(at: info.indexPath, animated: true)
+        }
+        
+        view.backgroundColor = .random
+        tableView.tableFooterView = UIView()
     }
     
     // MARK: Initialization
-    
+
     /// Initializer
     init(_ level: Int = 0) {
         self.level = level
-        
+
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     /// Not implemented
     @available(*, unavailable, message: "Initializer unavailable")
     required init?(coder aDecoder: NSCoder) {

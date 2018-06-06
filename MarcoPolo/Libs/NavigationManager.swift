@@ -10,12 +10,12 @@
 @_exported import UIKit
 
 
-class NavigationManager {
+public class NavigationManager {
     
     var leftConstraint: NSLayoutConstraint?
     
     var animation: Animation = .default()
     
-    
+    var navigationItem: NavigationItem!
     
 }

@@ -11,14 +11,31 @@
 
 
 private var NavigationViewControllerAssociatedObjectHandle: UInt8 = 0
+private var NavigationItemAssociatedObjectHandle: UInt8 = 1
 
 extension UIViewController {
     
+    /// [Navigo] Navigation item (details)
+    public internal(set) var navigationDetails: NavigationItem {
+        get {
+            guard let item = objc_getAssociatedObject(self, &NavigationItemAssociatedObjectHandle) as? NavigationItem else {
+                let item = NavigationItem()
+                self.navigationDetails = item
+                return item
+            }
+            return item
+        }
+        set {
+            objc_setAssociatedObject(self, &NavigationItemAssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    /// [Navigo] Navigation manager (only available to pushed view controllers)
     var navigationManager: NavigationManager? {
         return navigationViewController?.navigationManagers[ObjectIdentifier(self)]
     }
     
-    /// [Navigo] Navigation view controller
+    /// [Navigo] Navigation view controller (only available to pushed view controllers)
     public internal(set) var navigationViewController: NavigationViewController? {
         get {
             guard let c = objc_getAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle) as? NavigationViewController else {

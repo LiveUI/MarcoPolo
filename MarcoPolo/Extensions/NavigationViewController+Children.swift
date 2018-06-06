@@ -13,8 +13,8 @@ extension NavigationViewController {
     
     func updateSafeArea() {
         if #available(iOS 11.0, *) {
-            for vc in viewControllers {
-                vc.additionalSafeAreaInsets.top = navigationBar.height - vc.view.safeAreaInsets.top
+            for _ in viewControllers {
+                //vc.additionalSafeAreaInsets.top = navigationBar.minHeight - vc.view.safeAreaInsets.top
             }
         }
     }

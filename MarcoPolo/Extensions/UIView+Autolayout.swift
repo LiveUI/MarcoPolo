@@ -60,6 +60,28 @@ struct Layout {
         return constraint
     }
     
+    @discardableResult func min(width constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .width,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: nil,
+                                            attribute: .notAnAttribute,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func min(height constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .height,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: nil,
+                                            attribute: .notAnAttribute,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
     @discardableResult func width(_ constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .width,
@@ -82,7 +104,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinWidthToSuperview(constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinWidthToSuperview(width constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .width,
                                             relatedBy: .equal,
@@ -93,7 +115,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinLeadingToSuperview(constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinLeadingToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .leading,
                                             relatedBy: .equal,
@@ -105,7 +127,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTrailingToSuperview(constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinTrailingToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .trailing,
                                             relatedBy: .equal,
@@ -116,7 +138,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTopToSuperview(constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinTopToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,
                                             relatedBy: .equal,
@@ -127,7 +149,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTopToView(view:UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinTopToView(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,
                                             relatedBy: .equal,
@@ -138,11 +160,33 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinBottomToView(view:UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func pinTopToBottom(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .top,
+                                            relatedBy: .equal,
+                                            toItem: view,
+                                            attribute: .bottom,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func pinBottomToView(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .bottom,
                                             relatedBy: .equal,
                                             toItem: view,
+                                            attribute: .bottom,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func makeBottomLessThanOrEqualToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .bottom,
+                                            relatedBy: .lessThanOrEqual,
+                                            toItem: safeSuperview(),
                                             attribute: .bottom,
                                             multiplier: 1, constant: constant)
         safeSuperview().addConstraint(constraint)
