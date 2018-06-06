@@ -29,6 +29,7 @@
 		15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */; };
 		15A1182620C7EC5500CE4263 /* NavigationViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */; };
 		15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */; };
+		22B30F04987D0F4456D80356 /* Pods_NavCon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC8BB8931F51D6E586D0C33 /* Pods_NavCon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E0F41C2D38CE15DAF4E53D4 /* Pods-NavCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NavCon/Pods-NavCon.release.xcconfig"; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Managers.swift"; sourceTree = "<group>"; };
 		15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Animations.swift"; sourceTree = "<group>"; };
 		15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		484691D076CA1EA3E421D5A8 /* Pods-NavCon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NavCon/Pods-NavCon.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC8BB8931F51D6E586D0C33 /* Pods_NavCon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavCon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,18 +99,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A1175520C72A6000CE4263 /* Navigo.framework in Frameworks */,
+				22B30F04987D0F4456D80356 /* Pods_NavCon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FF3C36799383BCC4F9F5E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8BB8931F51D6E586D0C33 /* Pods_NavCon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15A1172520C728DD00CE4263 = {
 			isa = PBXGroup;
 			children = (
 				15A1173F20C7292D00CE4263 /* NavCon */,
 				15A1173120C728DD00CE4263 /* Navigo */,
 				15A1173020C728DD00CE4263 /* Products */,
+				25D97EA597B488B0FDEDB85B /* Pods */,
+				0FF3C36799383BCC4F9F5E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +234,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		25D97EA597B488B0FDEDB85B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				484691D076CA1EA3E421D5A8 /* Pods-NavCon.debug.xcconfig */,
+				0E0F41C2D38CE15DAF4E53D4 /* Pods-NavCon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -255,10 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "NavCon" */;
 			buildPhases = (
+				7F19C867470CBA89C3A67288 /* [CP] Check Pods Manifest.lock */,
 				15A1173A20C7292D00CE4263 /* Sources */,
 				15A1173B20C7292D00CE4263 /* Frameworks */,
 				15A1173C20C7292D00CE4263 /* Resources */,
 				15A1175920C72A6000CE4263 /* Embed Frameworks */,
+				17B4F0A4DCD176B73F28485F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 15A1172920C728DD00CE4263 /* Build configuration list for PBXProject "NavigationViewController" */;
+			buildConfigurationList = 15A1172920C728DD00CE4263 /* Build configuration list for PBXProject "Navigo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -326,6 +352,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B4F0A4DCD176B73F28485F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NavCon/Pods-NavCon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Presentables/Presentables.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentables.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NavCon/Pods-NavCon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F19C867470CBA89C3A67288 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavCon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15A1172B20C728DD00CE4263 /* Sources */ = {
@@ -514,11 +579,7 @@
 				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -541,11 +602,7 @@
 				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -556,16 +613,14 @@
 		};
 		15A1174E20C7292F00CE4263 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484691D076CA1EA3E421D5A8 /* Pods-NavCon.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -575,16 +630,14 @@
 		};
 		15A1174F20C7292F00CE4263 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0F41C2D38CE15DAF4E53D4 /* Pods-NavCon.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -595,7 +648,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15A1172920C728DD00CE4263 /* Build configuration list for PBXProject "NavigationViewController" */ = {
+		15A1172920C728DD00CE4263 /* Build configuration list for PBXProject "Navigo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15A1173520C728DD00CE4263 /* Debug */,

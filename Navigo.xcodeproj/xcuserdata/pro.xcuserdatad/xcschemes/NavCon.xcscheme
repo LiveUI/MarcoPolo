@@ -17,7 +17,7 @@
                BlueprintIdentifier = "15A1173D20C7292D00CE4263"
                BuildableName = "NavCon.app"
                BlueprintName = "NavCon"
-               ReferencedContainer = "container:NavigationViewController.xcodeproj">
+               ReferencedContainer = "container:Navigo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "15A1173D20C7292D00CE4263"
             BuildableName = "NavCon.app"
             BlueprintName = "NavCon"
-            ReferencedContainer = "container:NavigationViewController.xcodeproj">
+            ReferencedContainer = "container:Navigo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "15A1173D20C7292D00CE4263"
             BuildableName = "NavCon.app"
             BlueprintName = "NavCon"
-            ReferencedContainer = "container:NavigationViewController.xcodeproj">
+            ReferencedContainer = "container:Navigo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "15A1173D20C7292D00CE4263"
             BuildableName = "NavCon.app"
             BlueprintName = "NavCon"
-            ReferencedContainer = "container:NavigationViewController.xcodeproj">
+            ReferencedContainer = "container:Navigo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
