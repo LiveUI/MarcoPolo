@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15A1172E20C728DD00CE4263"
-               BuildableName = "Navigo.framework"
-               BlueprintName = "Navigo"
+               BuildableName = "MarcoPolo.framework"
+               BlueprintName = "MarcoPolo"
                ReferencedContainer = "container:Navigo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15A1172E20C728DD00CE4263"
-            BuildableName = "Navigo.framework"
-            BlueprintName = "Navigo"
+            BuildableName = "MarcoPolo.framework"
+            BlueprintName = "MarcoPolo"
             ReferencedContainer = "container:Navigo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15A1172E20C728DD00CE4263"
-            BuildableName = "Navigo.framework"
-            BlueprintName = "Navigo"
+            BuildableName = "MarcoPolo.framework"
+            BlueprintName = "MarcoPolo"
             ReferencedContainer = "container:Navigo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -13,8 +13,8 @@
 		15A1174820C7292F00CE4263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A1174720C7292F00CE4263 /* Assets.xcassets */; };
 		15A1174B20C7292F00CE4263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A1174920C7292F00CE4263 /* LaunchScreen.storyboard */; };
 		15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175320C729D500CE4263 /* NavigationViewController.swift */; };
-		15A1175520C72A6000CE4263 /* Navigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* Navigo.framework */; };
-		15A1175620C72A6000CE4263 /* Navigo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* Navigo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15A1175520C72A6000CE4263 /* MarcoPolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* MarcoPolo.framework */; };
+		15A1175620C72A6000CE4263 /* MarcoPolo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* MarcoPolo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15A1175C20C72CB900CE4263 /* NavigationViewController+Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175B20C72CB900CE4263 /* NavigationViewController+Stack.swift */; };
 		15A1175E20C72D0900CE4263 /* NavigationViewController+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175D20C72D0900CE4263 /* NavigationViewController+Push.swift */; };
 		15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */; };
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				15A1175620C72A6000CE4263 /* Navigo.framework in Embed Frameworks */,
+				15A1175620C72A6000CE4263 /* MarcoPolo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,10 +58,10 @@
 
 /* Begin PBXFileReference section */
 		0E0F41C2D38CE15DAF4E53D4 /* Pods-NavCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NavCon/Pods-NavCon.release.xcconfig"; sourceTree = "<group>"; };
-		15A1172F20C728DD00CE4263 /* Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15A1173E20C7292D00CE4263 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A1173E20C7292D00CE4263 /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1174020C7292D00CE4263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A1174220C7292D00CE4263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15A1174720C7292F00CE4263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A1175520C72A6000CE4263 /* Navigo.framework in Frameworks */,
+				15A1175520C72A6000CE4263 /* MarcoPolo.framework in Frameworks */,
 				22B30F04987D0F4456D80356 /* Pods_NavCon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +123,7 @@
 			children = (
 				15A1182920C819F400CE4263 /* Configuration */,
 				15A1173F20C7292D00CE4263 /* Demo */,
-				15A1173120C728DD00CE4263 /* Navigo */,
+				15A1173120C728DD00CE4263 /* MarcoPolo */,
 				15A1173020C728DD00CE4263 /* Products */,
 				25D97EA597B488B0FDEDB85B /* Pods */,
 				0FF3C36799383BCC4F9F5E0B /* Frameworks */,
@@ -133,13 +133,13 @@
 		15A1173020C728DD00CE4263 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15A1172F20C728DD00CE4263 /* Navigo.framework */,
-				15A1173E20C7292D00CE4263 /* Navigation.app */,
+				15A1172F20C728DD00CE4263 /* MarcoPolo.framework */,
+				15A1173E20C7292D00CE4263 /* MarcoPolo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15A1173120C728DD00CE4263 /* Navigo */ = {
+		15A1173120C728DD00CE4263 /* MarcoPolo */ = {
 			isa = PBXGroup;
 			children = (
 				15A1176720C73CF900CE4263 /* Libs */,
@@ -148,7 +148,7 @@
 				15A1175220C729B900CE4263 /* View controllers */,
 				15A1175120C7294F00CE4263 /* Supporting files */,
 			);
-			path = Navigo;
+			path = MarcoPolo;
 			sourceTree = "<group>";
 		};
 		15A1173F20C7292D00CE4263 /* Demo */ = {
@@ -273,9 +273,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15A1172E20C728DD00CE4263 /* Navigo */ = {
+		15A1172E20C728DD00CE4263 /* MarcoPolo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "Navigo" */;
+			buildConfigurationList = 15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "MarcoPolo" */;
 			buildPhases = (
 				15A1172A20C728DD00CE4263 /* Headers */,
 				15A1172B20C728DD00CE4263 /* Sources */,
@@ -286,9 +286,9 @@
 			);
 			dependencies = (
 			);
-			name = Navigo;
+			name = MarcoPolo;
 			productName = NavigationViewController;
-			productReference = 15A1172F20C728DD00CE4263 /* Navigo.framework */;
+			productReference = 15A1172F20C728DD00CE4263 /* MarcoPolo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		15A1173D20C7292D00CE4263 /* Demo */ = {
@@ -309,7 +309,7 @@
 			);
 			name = Demo;
 			productName = NavCon;
-			productReference = 15A1173E20C7292D00CE4263 /* Navigation.app */;
+			productReference = 15A1173E20C7292D00CE4263 /* MarcoPolo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -345,7 +345,7 @@
 			projectRoot = "";
 			targets = (
 				15A1173D20C7292D00CE4263 /* Demo */,
-				15A1172E20C728DD00CE4263 /* Navigo */,
+				15A1172E20C728DD00CE4263 /* MarcoPolo */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +445,7 @@
 /* Begin PBXTargetDependency section */
 		15A1175820C72A6000CE4263 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 15A1172E20C728DD00CE4263 /* Navigo */;
+			target = 15A1172E20C728DD00CE4263 /* MarcoPolo */;
 			targetProxy = 15A1175720C72A6000CE4263 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -594,7 +594,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
+				INFOPLIST_FILE = "MarcoPolo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -620,7 +620,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
+				INFOPLIST_FILE = "MarcoPolo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,7 +649,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
-				PRODUCT_NAME = Navigation;
+				PRODUCT_NAME = MarcoPolo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -668,7 +668,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
-				PRODUCT_NAME = Navigation;
+				PRODUCT_NAME = MarcoPolo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "Navigo" */ = {
+		15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "MarcoPolo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15A1173820C728DD00CE4263 /* Debug */,

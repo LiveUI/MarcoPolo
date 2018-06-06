@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NavCon.xcscheme</key>
+		<key>Demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Navigo.xcscheme</key>
+		<key>MarcoPolo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
