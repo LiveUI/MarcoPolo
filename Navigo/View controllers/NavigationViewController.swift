@@ -26,6 +26,9 @@ open class NavigationViewController: UIViewController {
     /// Navigation managers
     var navigationManagers: [ObjectIdentifier: NavigationManager] = [:]
     
+    /// Is animating
+    var isAnimating: Bool = false
+    
     // MARK: View lifecycle
     
     open override func viewDidLoad() {
@@ -43,6 +46,7 @@ open class NavigationViewController: UIViewController {
         navigationBar.layout.pinHorizontalEdgesToSuperView()
         navigationBarYPosition = navigationBar.layout.pinTopToSuperview()
         
+        register(managerFor: rootViewController, animation: .none)
         add(childViewController: rootViewController)
     }
     

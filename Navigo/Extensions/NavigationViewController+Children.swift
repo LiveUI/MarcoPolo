@@ -28,17 +28,17 @@ extension NavigationViewController {
     
     /// Remove view controller from the stack
     func remove(childViewController: UIViewController) {
-        childViewController.willMove(toParent: nil)
+        childViewController.willMove(toParentViewController: nil)
         childViewController.view.removeFromSuperview()
-        childViewController.removeFromParent()
+        childViewController.removeFromParentViewController()
     }
     
     /// Adds child view controller onto the topn of the screen (below nav bar)
     func add(childViewController: UIViewController) {
-        addChild(childViewController)
+        addChildViewController(childViewController)
         view.addSubview(childViewController.view)
-        childViewController.didMove(toParent: self)
-        view.bringSubviewToFront(navigationBar)
+        childViewController.didMove(toParentViewController: self)
+        view.bringSubview(toFront: navigationBar)
         childViewController.navigationManager?.leftConstraint = setConstraints(on: childViewController)
         updateSafeArea()
     }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Presentables
+
 
 class ViewController: UIViewController {
     
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
         push.layer.cornerRadius = 5
         view.addSubview(push)
         
-        if (level > 0) {
+        if level > 0 {
             let pop = UIButton(frame: CGRect(x: 50, y: 310, width: 150, height: 44))
             pop.setTitleColor(pop.tintColor, for: .normal)
             pop.setTitle("Pop to level: \((level - 1))", for: .normal)
@@ -69,7 +71,7 @@ class ViewController: UIViewController {
     // MARK: Actions
     
     @objc func pushNewController(_ sender: UIButton) {
-        navigationViewController?.push(viewController: ViewController(level + 1))
+        navigationViewController?.push(viewController: ViewController(level + 1), animation: .paralax())
     }
     
     @objc func popController(_ sender: UIButton) {

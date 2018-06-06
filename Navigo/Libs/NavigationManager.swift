@@ -14,6 +14,6 @@ class NavigationManager {
     
     var leftConstraint: NSLayoutConstraint?
     
-    var animation: Animation = .default
+    var animation: Animation = .default()
     
 }

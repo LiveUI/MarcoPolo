@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,13 +45,13 @@
 		1504DB1CFF3D9D704A763F2CA688B8A8 /* Pods-NavCon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NavCon-dummy.m"; sourceTree = "<group>"; };
 		174DC400C28536E3538DC9E0E58E3959 /* PresentableCollectionViewDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableCollectionViewDataManager.swift; path = "Presentables/Classes/Collection views/PresentableCollectionViewDataManager.swift"; sourceTree = "<group>"; };
 		2172938F0CEAEA0DA876E8C4074DE316 /* PresentableManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableManager.swift; path = Presentables/Classes/Protocols/PresentableManager.swift; sourceTree = "<group>"; };
-		2C82F61EE6640A5979B5527AF41C2157 /* Pods_NavCon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NavCon.framework; path = "Pods-NavCon.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C82F61EE6640A5979B5527AF41C2157 /* Pods_NavCon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavCon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF284308413F348A87B99E44811909E /* PresentableTableViewDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableTableViewDataManager.swift; path = "Presentables/Classes/Table views/PresentableTableViewDataManager.swift"; sourceTree = "<group>"; };
 		3BF9B3EE7E2A09848CE35A3438452804 /* Presentables-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presentables-dummy.m"; sourceTree = "<group>"; };
 		3EB607DF0B013A6BBBD974797F36602F /* Presentables+UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentables+UITableView.swift"; path = "Presentables/Classes/Table views/Presentables+UITableView.swift"; sourceTree = "<group>"; };
 		581F23C547F16D6E4C32E9BC49174D1A /* Pods-NavCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NavCon.release.xcconfig"; sourceTree = "<group>"; };
 		5C3E437F818F455AD03CEAD7923E08B2 /* PresentableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableSection.swift; path = Presentables/Classes/Libs/PresentableSection.swift; sourceTree = "<group>"; };
-		615E91C444C94C7F0064A4810EAC0576 /* Presentables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presentables.framework; path = Presentables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		615E91C444C94C7F0064A4810EAC0576 /* Presentables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A21225250497ADB5A6EF265F2E0757 /* Pods-NavCon-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NavCon-frameworks.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6989784F4145ABD12DBC742E8121F1C6 /* Presentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presentable.swift; path = Presentables/Classes/Libs/Presentable.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		805E28B9BFCB7636BDD359A3ACFDC9D2 /* UICollectionView+Presentables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Presentables.swift"; path = "Presentables/Classes/Collection views/UICollectionView+Presentables.swift"; sourceTree = "<group>"; };
 		8B5589A44797D6928CE9BC4B20D46C65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		917317066F74CFF55730135AADB22BC1 /* PresentableTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentableTableViewController.swift; path = "Presentables/Classes/Table views/PresentableTableViewController.swift"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
 		A1DE7F999D976499C18341951C075F77 /* Presentables-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentables-umbrella.h"; sourceTree = "<group>"; };
 		A537B93648BD9203F8F3062D0C7FD402 /* Presentables+UICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentables+UICollectionView.swift"; path = "Presentables/Classes/Collection views/Presentables+UICollectionView.swift"; sourceTree = "<group>"; };
 		A819E0EFFBEF07E5C43F1E7869745FFD /* Pods-NavCon-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NavCon-resources.sh"; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				805E28B9BFCB7636BDD359A3ACFDC9D2 /* UICollectionView+Presentables.swift */,
 				CD020FA0FB02E80525ED17BC6969A880 /* Support Files */,
 			);
-			name = Presentables;
 			path = Presentables;
 			sourceTree = "<group>";
 		};

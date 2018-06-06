@@ -22,7 +22,7 @@ struct Layout {
     
     @discardableResult func pinHorizontalEdgesToSuperView(left: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(left)-[view]-(right)-|",
-                                                        options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                         options: NSLayoutFormatOptions(rawValue: 0),
                                                         metrics: ["left": left, "right": right],
                                                         views: ["view": element])
         safeSuperview().addConstraints(constraints)
@@ -31,7 +31,7 @@ struct Layout {
     
     @discardableResult func pinVerticalEdgesToSuperView(top: CGFloat = 0, bottom: CGFloat = 0) -> [NSLayoutConstraint] {
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(top)-[view]-(bottom)-|",
-                                                        options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                         options: NSLayoutFormatOptions(rawValue: 0),
                                                         metrics: ["top": top, "bottom": bottom],
                                                         views: ["view": element])
         safeSuperview().addConstraints(constraints)
