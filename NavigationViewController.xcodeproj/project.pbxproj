@@ -8,12 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
+		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
+		15A1174820C7292F00CE4263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A1174720C7292F00CE4263 /* Assets.xcassets */; };
+		15A1174B20C7292F00CE4263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A1174920C7292F00CE4263 /* LaunchScreen.storyboard */; };
+		15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175320C729D500CE4263 /* NavigationViewController.swift */; };
+		15A1175520C72A6000CE4263 /* Navigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* Navigo.framework */; };
+		15A1175620C72A6000CE4263 /* Navigo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* Navigo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15A1175C20C72CB900CE4263 /* NavigationViewController+Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175B20C72CB900CE4263 /* NavigationViewController+Stack.swift */; };
+		15A1175E20C72D0900CE4263 /* NavigationViewController+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175D20C72D0900CE4263 /* NavigationViewController+Push.swift */; };
+		15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */; };
+		15A1176320C7354200CE4263 /* NavigationViewController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */; };
+		15A1176620C73CBF00CE4263 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176520C73CBF00CE4263 /* NavigationBar.swift */; };
+		15A1176920C73D0B00CE4263 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176820C73D0B00CE4263 /* NavigationManager.swift */; };
+		15A1176B20C73F4C00CE4263 /* NavigationViewController+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176A20C73F4C00CE4263 /* NavigationViewController+Disabled.swift */; };
+		15A1176D20C7483400CE4263 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176C20C7483400CE4263 /* BackArrow.swift */; };
+		15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */; };
+		15A1177220C7E2DA00CE4263 /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */; };
+		15A1177420C7E79900CE4263 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1177320C7E79900CE4263 /* Animation.swift */; };
+		15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */; };
+		15A1182620C7EC5500CE4263 /* NavigationViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */; };
+		15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		15A1175720C72A6000CE4263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15A1172620C728DD00CE4263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A1172E20C728DD00CE4263;
+			remoteInfo = Navigo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15A1175920C72A6000CE4263 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15A1175620C72A6000CE4263 /* Navigo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		15A1172F20C728DD00CE4263 /* NavigationViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A1172F20C728DD00CE4263 /* Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A1173E20C7292D00CE4263 /* NavCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A1174020C7292D00CE4263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15A1174220C7292D00CE4263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15A1174720C7292F00CE4263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15A1174A20C7292F00CE4263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15A1174C20C7292F00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A1175320C729D500CE4263 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		15A1175B20C72CB900CE4263 /* NavigationViewController+Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Stack.swift"; sourceTree = "<group>"; };
+		15A1175D20C72D0900CE4263 /* NavigationViewController+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Push.swift"; sourceTree = "<group>"; };
+		15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Access.swift"; sourceTree = "<group>"; };
+		15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Pop.swift"; sourceTree = "<group>"; };
+		15A1176520C73CBF00CE4263 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		15A1176820C73D0B00CE4263 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		15A1176A20C73F4C00CE4263 /* NavigationViewController+Disabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Disabled.swift"; sourceTree = "<group>"; };
+		15A1176C20C7483400CE4263 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
+		15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Children.swift"; sourceTree = "<group>"; };
+		15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
+		15A1177320C7E79900CE4263 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Managers.swift"; sourceTree = "<group>"; };
+		15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Animations.swift"; sourceTree = "<group>"; };
+		15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,13 +90,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15A1173B20C7292D00CE4263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A1175520C72A6000CE4263 /* Navigo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		15A1172520C728DD00CE4263 = {
 			isa = PBXGroup;
 			children = (
-				15A1173120C728DD00CE4263 /* NavigationViewController */,
+				15A1173F20C7292D00CE4263 /* NavCon */,
+				15A1173120C728DD00CE4263 /* Navigo */,
 				15A1173020C728DD00CE4263 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -38,18 +113,110 @@
 		15A1173020C728DD00CE4263 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15A1172F20C728DD00CE4263 /* NavigationViewController.framework */,
+				15A1172F20C728DD00CE4263 /* Navigo.framework */,
+				15A1173E20C7292D00CE4263 /* NavCon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15A1173120C728DD00CE4263 /* NavigationViewController */ = {
+		15A1173120C728DD00CE4263 /* Navigo */ = {
+			isa = PBXGroup;
+			children = (
+				15A1176720C73CF900CE4263 /* Libs */,
+				15A1176420C73CAE00CE4263 /* Views */,
+				15A1175A20C72CA300CE4263 /* Extensions */,
+				15A1175220C729B900CE4263 /* View controllers */,
+				15A1175120C7294F00CE4263 /* Supporting files */,
+			);
+			path = Navigo;
+			sourceTree = "<group>";
+		};
+		15A1173F20C7292D00CE4263 /* NavCon */ = {
+			isa = PBXGroup;
+			children = (
+				15A1177020C7E2CB00CE4263 /* Extensions */,
+				15A1176120C72FC500CE4263 /* View controller */,
+				15A1175020C7293D00CE4263 /* Supporting files */,
+				15A1174020C7292D00CE4263 /* AppDelegate.swift */,
+			);
+			path = NavCon;
+			sourceTree = "<group>";
+		};
+		15A1175020C7293D00CE4263 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				15A1174720C7292F00CE4263 /* Assets.xcassets */,
+				15A1174920C7292F00CE4263 /* LaunchScreen.storyboard */,
+				15A1174C20C7292F00CE4263 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		15A1175120C7294F00CE4263 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				15A1173220C728DD00CE4263 /* NavigationViewController.h */,
 				15A1173320C728DD00CE4263 /* Info.plist */,
 			);
-			path = NavigationViewController;
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		15A1175220C729B900CE4263 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15A1175320C729D500CE4263 /* NavigationViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		15A1175A20C72CA300CE4263 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */,
+				15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */,
+				15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */,
+				15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */,
+				15A1176A20C73F4C00CE4263 /* NavigationViewController+Disabled.swift */,
+				15A1175B20C72CB900CE4263 /* NavigationViewController+Stack.swift */,
+				15A1175D20C72D0900CE4263 /* NavigationViewController+Push.swift */,
+				15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */,
+				15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15A1176120C72FC500CE4263 /* View controller */ = {
+			isa = PBXGroup;
+			children = (
+				15A1174220C7292D00CE4263 /* ViewController.swift */,
+			);
+			path = "View controller";
+			sourceTree = "<group>";
+		};
+		15A1176420C73CAE00CE4263 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15A1176520C73CBF00CE4263 /* NavigationBar.swift */,
+				15A1176C20C7483400CE4263 /* BackArrow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15A1176720C73CF900CE4263 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				15A1176820C73D0B00CE4263 /* NavigationManager.swift */,
+				15A1177320C7E79900CE4263 /* Animation.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		15A1177020C7E2CB00CE4263 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,9 +233,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15A1172E20C728DD00CE4263 /* NavigationViewController */ = {
+		15A1172E20C728DD00CE4263 /* Navigo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "NavigationViewController" */;
+			buildConfigurationList = 15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "Navigo" */;
 			buildPhases = (
 				15A1172A20C728DD00CE4263 /* Headers */,
 				15A1172B20C728DD00CE4263 /* Sources */,
@@ -79,10 +246,29 @@
 			);
 			dependencies = (
 			);
-			name = NavigationViewController;
+			name = Navigo;
 			productName = NavigationViewController;
-			productReference = 15A1172F20C728DD00CE4263 /* NavigationViewController.framework */;
+			productReference = 15A1172F20C728DD00CE4263 /* Navigo.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		15A1173D20C7292D00CE4263 /* NavCon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "NavCon" */;
+			buildPhases = (
+				15A1173A20C7292D00CE4263 /* Sources */,
+				15A1173B20C7292D00CE4263 /* Frameworks */,
+				15A1173C20C7292D00CE4263 /* Resources */,
+				15A1175920C72A6000CE4263 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15A1175820C72A6000CE4263 /* PBXTargetDependency */,
+			);
+			name = NavCon;
+			productName = NavCon;
+			productReference = 15A1173E20C7292D00CE4263 /* NavCon.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -90,10 +276,15 @@
 		15A1172620C728DD00CE4263 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = LiveUI;
 				TargetAttributes = {
 					15A1172E20C728DD00CE4263 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					15A1173D20C7292D00CE4263 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -104,13 +295,15 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 15A1172520C728DD00CE4263;
 			productRefGroup = 15A1173020C728DD00CE4263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15A1172E20C728DD00CE4263 /* NavigationViewController */,
+				15A1173D20C7292D00CE4263 /* NavCon */,
+				15A1172E20C728DD00CE4263 /* Navigo */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +316,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15A1173C20C7292D00CE4263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A1174B20C7292F00CE4263 /* LaunchScreen.storyboard in Resources */,
+				15A1174820C7292F00CE4263 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +332,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A1177420C7E79900CE4263 /* Animation.swift in Sources */,
+				15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */,
+				15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */,
+				15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */,
+				15A1176920C73D0B00CE4263 /* NavigationManager.swift in Sources */,
+				15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */,
+				15A1176D20C7483400CE4263 /* BackArrow.swift in Sources */,
+				15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */,
+				15A1176320C7354200CE4263 /* NavigationViewController+Pop.swift in Sources */,
+				15A1176B20C73F4C00CE4263 /* NavigationViewController+Disabled.swift in Sources */,
+				15A1175C20C72CB900CE4263 /* NavigationViewController+Stack.swift in Sources */,
+				15A1175E20C72D0900CE4263 /* NavigationViewController+Push.swift in Sources */,
+				15A1176620C73CBF00CE4263 /* NavigationBar.swift in Sources */,
+				15A1182620C7EC5500CE4263 /* NavigationViewController+Animations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A1173A20C7292D00CE4263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A1177220C7E2DA00CE4263 /* UIColor+Tools.swift in Sources */,
+				15A1174320C7292D00CE4263 /* ViewController.swift in Sources */,
+				15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15A1175820C72A6000CE4263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A1172E20C728DD00CE4263 /* Navigo */;
+			targetProxy = 15A1175720C72A6000CE4263 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15A1174920C7292F00CE4263 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A1174A20C7292F00CE4263 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		15A1173520C728DD00CE4263 /* Debug */ = {
@@ -188,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -245,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -259,22 +504,25 @@
 		15A1173820C728DD00CE4263 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NavigationViewController/Info.plist;
+				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavigationViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,22 +531,62 @@
 		15A1173920C728DD00CE4263 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NavigationViewController/Info.plist;
+				INFOPLIST_FILE = "Navigo/Supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavigationViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.Navigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15A1174E20C7292F00CE4263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15A1174F20C7292F00CE4263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NavCon/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.liveui.NavCon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,11 +604,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "NavigationViewController" */ = {
+		15A1173720C728DD00CE4263 /* Build configuration list for PBXNativeTarget "Navigo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15A1173820C728DD00CE4263 /* Debug */,
 				15A1173920C728DD00CE4263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A1174D20C7292F00CE4263 /* Build configuration list for PBXNativeTarget "NavCon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A1174E20C7292F00CE4263 /* Debug */,
+				15A1174F20C7292F00CE4263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
