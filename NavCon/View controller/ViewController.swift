@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     }
     
     @objc func popController(_ sender: UIButton) {
-        navigationViewController?.popViewController()
+        navigationViewController?.popViewController(animation: .move())
     }
     
     // MARK: Initialization

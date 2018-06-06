@@ -17,14 +17,14 @@ extension NavigationViewController {
         guard
             let upperManager = upperViewController.navigationManager,
             let lowerManager = lowerViewController.navigationManager,
-            lowerManager.animation.storage != Animation.Storage.none,
+            upperManager.animation.storage != Animation.Storage.none,
             let lowerLeftConstraint = lowerManager.leftConstraint,
             let upperLeftConstraint = upperManager.leftConstraint else {
                 finished()
                 return 0.0
         }
         
-        if lowerManager.animation.storage == .bounce {
+        if upperManager.animation.storage == .bounce {
             lowerLeftConstraint.constant = -(view.bounds.size.width / 2)
             upperLeftConstraint.constant = 0
             view.layoutIfNeeded()
@@ -45,7 +45,7 @@ extension NavigationViewController {
         } else {
             // Set starting position
             upperLeftConstraint.constant = 0
-            switch lowerManager.animation.storage {
+            switch upperManager.animation.storage {
             case .move:
                 lowerLeftConstraint.constant = -view.bounds.size.width
             case .over:
@@ -58,12 +58,12 @@ extension NavigationViewController {
             // Animate top out
             lowerLeftConstraint.constant = 0
             upperLeftConstraint.constant = view.bounds.size.width
-            UIView.animate(withDuration: lowerManager.animation.storage.animationTime, delay: 0.0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: upperManager.animation.storage.animationTime, delay: 0.0, options: .curveEaseInOut, animations: {
                 self.view.layoutIfNeeded()
             }) { _ in
                 finished()
             }
-            return lowerManager.animation.storage.animationTime
+            return upperManager.animation.storage.animationTime
         }
     }
     
