@@ -11,14 +11,20 @@ import Foundation
 
 public class NavigationItem {
     
-    var navigationBar: UINavigationBar!
+    /// Private interface for title views content
+    private var _content: TitleView.Content?
     
-    public var prompt: String?
-    public var title: String?
-    public var subtitle: String?
-    
-    init() {
-        
+    /// Content for title view
+    public var content: TitleView.Content {
+        get {
+            guard let content = _content else {
+                let content = TitleView.Content()
+                self.content = content
+                return content
+            }
+            return content
+        }
+        set { _content = newValue }
     }
     
 }

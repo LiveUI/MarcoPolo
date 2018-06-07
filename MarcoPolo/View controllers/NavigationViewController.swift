@@ -37,17 +37,18 @@ open class NavigationViewController: UIViewController {
         view.backgroundColor = .white
         
         // TODO: Fix following
-        var safeAreaTop: CGFloat = 20.0
-        if #available(iOS 11.0, *) {
-            safeAreaTop = view.safeAreaInsets.top + 44.0
-        }
-        navigationBar = NavigationBar(minHeight: (safeAreaTop + 84.0))
+//        var safeAreaTop: CGFloat = 20.0
+//        if #available(iOS 11.0, *) {
+//            safeAreaTop = view.safeAreaInsets.top + 44.0
+//        }
+        navigationBar = NavigationBar(minHeight: 66)
         view.addSubview(navigationBar)
         navigationBar.layout.pinHorizontalEdgesToSuperView()
         navigationBarYPosition = navigationBar.layout.pinTopToSuperview()
         
         register(managerFor: rootViewController, animation: .none)
         add(childViewController: rootViewController)
+        change(navigationItemFrom: rootViewController, animationTime: 0.0)
     }
     
     // MARK: Initialization

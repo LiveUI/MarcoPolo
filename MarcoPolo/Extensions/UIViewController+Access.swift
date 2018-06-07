@@ -15,12 +15,14 @@ private var NavigationItemAssociatedObjectHandle: UInt8 = 1
 
 extension UIViewController {
     
-    /// [Navigo] Navigation item (details)
-    public internal(set) var navigationDetails: NavigationItem {
+    /// [MarcoPolo] Navigation item (details)
+    public internal(set) var navigation: NavigationItem {
         get {
             guard let item = objc_getAssociatedObject(self, &NavigationItemAssociatedObjectHandle) as? NavigationItem else {
                 let item = NavigationItem()
-                self.navigationDetails = item
+                item.content.title = title
+                item.content.viewController = self
+                self.navigation = item
                 return item
             }
             return item
@@ -30,12 +32,12 @@ extension UIViewController {
         }
     }
     
-    /// [Navigo] Navigation manager (only available to pushed view controllers)
+    /// [MarcoPolo] Navigation manager (only available to pushed view controllers)
     var navigationManager: NavigationManager? {
         return navigationViewController?.navigationManagers[ObjectIdentifier(self)]
     }
     
-    /// [Navigo] Navigation view controller (only available to pushed view controllers)
+    /// [MarcoPolo] Navigation view controller (only available to pushed view controllers)
     public internal(set) var navigationViewController: NavigationViewController? {
         get {
             guard let c = objc_getAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle) as? NavigationViewController else {

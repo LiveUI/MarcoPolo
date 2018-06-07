@@ -193,6 +193,17 @@ struct Layout {
         return constraint
     }
     
+    @discardableResult func makeBottomGreaterThanOrEqualToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .bottom,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: safeSuperview(),
+                                            attribute: .bottom,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
     func fillSuperview(padding: CGFloat = 0) {
         safeSuperview()
         pinHorizontalEdgesToSuperView(left: padding, right: padding)

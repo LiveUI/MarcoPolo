@@ -13,6 +13,8 @@
 		1531DE7720C888CE00E8F111 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7620C888CE00E8F111 /* TitleView.swift */; };
 		1531DE7920C88D2600E8F111 /* ReportingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7820C88D2600E8F111 /* ReportingLabel.swift */; };
 		1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7A20C8973600E8F111 /* String+Tools.swift */; };
+		1531DE7D20C9400E00E8F111 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7C20C9400E00E8F111 /* TableViewCell.swift */; };
+		1531DE8020C94C7F00E8F111 /* NavigationViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */; };
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
 		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
@@ -66,6 +68,8 @@
 		1531DE7620C888CE00E8F111 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		1531DE7820C88D2600E8F111 /* ReportingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingLabel.swift; sourceTree = "<group>"; };
 		1531DE7A20C8973600E8F111 /* String+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
+		1531DE7C20C9400E00E8F111 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+NavBar.swift"; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +132,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1531DE7E20C9401800E8F111 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1531DE7C20C9400E00E8F111 /* TableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		15A1172520C728DD00CE4263 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +176,7 @@
 		15A1173F20C7292D00CE4263 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1531DE7E20C9401800E8F111 /* Cells */,
 				15A1177020C7E2CB00CE4263 /* Extensions */,
 				15A1176120C72FC500CE4263 /* View controller */,
 				15A1175020C7293D00CE4263 /* Supporting files */,
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */,
+				1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */,
 				15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */,
 				15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */,
 				15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */,
@@ -430,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A1177420C7E79900CE4263 /* Animation.swift in Sources */,
+				1531DE8020C94C7F00E8F111 /* NavigationViewController+NavBar.swift in Sources */,
 				15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */,
 				15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */,
 				15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */,
@@ -455,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A1177220C7E2DA00CE4263 /* UIColor+Tools.swift in Sources */,
+				1531DE7D20C9400E00E8F111 /* TableViewCell.swift in Sources */,
 				15A1174320C7292D00CE4263 /* ViewController.swift in Sources */,
 				15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */,
 			);

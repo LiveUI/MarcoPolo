@@ -36,10 +36,15 @@ open class NavigationBar: UIView {
             if _customTitleView === newValue { return }
             _customTitleView?.removeFromSuperview()
             guard let view = newValue else {
+                _customTitleView?.removeFromSuperview()
                 _customTitleView = nil
                 return
             }
             _customTitleView = view
+            
+            view.layout.pinTopToSuperview(margin: 44)
+            view.layout.pinHorizontalEdgesToSuperView(left: 30, right: 30)
+            view.layout.makeBottomLessThanOrEqualToSuperview(margin: -6)
         }
     }
     
@@ -47,17 +52,18 @@ open class NavigationBar: UIView {
     
     @available(*, unavailable, message: "Method unavailable")
     open override func didMoveToSuperview() {
+        super.didMoveToSuperview()
         navigationBarHeight = layout.min(height: minHeight)
     }
     
     // MARK: Initialization
     
-    public init(minHeight: CGFloat = 64.0) {
+    public init(minHeight: CGFloat = 164.0) {
         self.minHeight = minHeight
         
         super.init(frame: .zero)
         
-        backgroundColor = .lightGray
+        backgroundColor = UIColor(white: 1, alpha: 0.9)
         
         addSubview(backgroundView)
         backgroundView.layout.fillSuperview()
@@ -66,9 +72,6 @@ open class NavigationBar: UIView {
         titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
         addSubview(titleView)
         customTitleView = titleView
-        titleView.layout.pinTopToSuperview(margin: 44)
-        titleView.layout.pinHorizontalEdgesToSuperView(left: 30, right: 30)
-        titleView.layout.makeBottomLessThanOrEqualToSuperview(margin: -6)
     }
     
     @available(*, unavailable, message: "Initializer unavailable")

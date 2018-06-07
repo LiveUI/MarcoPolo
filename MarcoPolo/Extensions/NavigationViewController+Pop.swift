@@ -14,7 +14,7 @@ extension NavigationViewController {
     
     /// Pops and returns the popped controller.
     @discardableResult public func popViewController(animation: Animation = .default()) -> UIViewController? {
-        guard viewControllers.count > 1, let viewController = viewControllers.last else {
+        guard viewControllers.count > 1, let upperViewController = viewControllers.last else {
             return nil
         }
         
@@ -23,21 +23,22 @@ extension NavigationViewController {
         case .default, .none:
             break
         default:
-            viewController.navigationManager?.animation = animation
+            upperViewController.navigationManager?.animation = animation
         }
         
         let previousViewController = viewControllers[viewControllers.count - 2]
         
         // Add previous view controller back on
         add(childViewController: previousViewController)
-        view.bringSubview(toFront: viewController.view)
+        view.bringSubview(toFront: upperViewController.view)
         view.bringSubview(toFront: navigationBar)
         
         // Animate
-        animate(upperViewController: viewController, to: previousViewController) {
-            self.remove(childViewController: viewController)
+        let time = animate(upperViewController: upperViewController, to: previousViewController) {
+            self.remove(childViewController: upperViewController)
         }
-        remove(managerFor: viewController)
+        change(navigationItemFrom: previousViewController, animationTime: time)
+        remove(managerFor: upperViewController)
         return viewControllers.removeLast()
     }
     

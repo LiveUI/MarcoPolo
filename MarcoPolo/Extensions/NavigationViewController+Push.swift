@@ -26,11 +26,12 @@ extension NavigationViewController {
         
         add(childViewController: viewController)
         
-        animate(viewController, over: previous) {
+        let time = animate(viewController, over: previous) {
             self.remove(childViewController: previous)
             
             self.isAnimating = false
         }
+        change(navigationItemFrom: viewController, animationTime: time)
     }
     
 }
