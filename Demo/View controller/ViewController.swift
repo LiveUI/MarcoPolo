@@ -39,7 +39,7 @@ class ViewController: PresentableTableViewController {
             cell.textLabel?.text = "Push to level: \((self.level + 1))"
             cell.accessoryType = .disclosureIndicator
         }).cellSelected {
-            self.navigationViewController?.push(viewController: ViewController(self.level + 1), animation: .bounce)
+            self.navigationViewController?.push(viewController: ViewController(self.level + 1), animation: .paralax(1))
         })
         if level > 0 {
             section.append(Presentable<TableViewCell>.create({ cell in
@@ -104,7 +104,7 @@ class ViewController: PresentableTableViewController {
             info.tableView.deselectRow(at: info.indexPath, animated: true)
         }
         
-        view.backgroundColor = .random
+        view.backgroundColor = .white
         tableView.tableFooterView = UIView()
     }
     

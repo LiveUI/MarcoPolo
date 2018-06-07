@@ -12,6 +12,28 @@
 
 open class NavigationBar: UIView {
     
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layout.printSafeInsets()
+        
+        if #available(iOS 11, *) {
+            topConstraint?.constant = (safeAreaInsets.top + topMargin)
+        } else {
+            topConstraint?.constant = topMargin
+        }
+    }
+    
+    /// Top margin below status bar safe area
+    public var topMargin: CGFloat {
+        didSet {
+            setNeedsLayout()
+            layoutIfNeeded()
+        }
+    }
+    
+    var topConstraint: NSLayoutConstraint?
+    
     var navigationBarHeight: NSLayoutConstraint!
     
     public var minHeight: CGFloat {
@@ -23,7 +45,7 @@ open class NavigationBar: UIView {
     var navigationViewController: NavigationViewController?
     
     /// Background view, always on the bottom; Ideal for
-    public var backgroundView = UIView()
+    public var backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
     public var titleView: TitleView? {
         get {
             return customTitleView as? TitleView
@@ -42,7 +64,7 @@ open class NavigationBar: UIView {
             }
             _customTitleView = view
             
-            view.layout.pinTopToSuperview(margin: 44)
+            topConstraint = view.layout.pinTopToSuperview()
             view.layout.pinHorizontalEdgesToSuperView(left: 30, right: 30)
             view.layout.makeBottomLessThanOrEqualToSuperview(margin: -6)
         }
@@ -61,9 +83,17 @@ open class NavigationBar: UIView {
     public init(minHeight: CGFloat = 164.0) {
         self.minHeight = minHeight
         
+        // TODO: Check on an older device/iOS!!!!
+        if #available(iOS 11, *) {
+            topMargin = 6
+        } else {
+            topMargin = 28
+        }
+        
         super.init(frame: .zero)
         
-        backgroundColor = UIColor(white: 1, alpha: 0.9)
+        backgroundColor = .clear
+        backgroundView.tintColor = .white
         
         addSubview(backgroundView)
         backgroundView.layout.fillSuperview()
@@ -72,6 +102,8 @@ open class NavigationBar: UIView {
         titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
         addSubview(titleView)
         customTitleView = titleView
+        
+        layout.printSafeInsets()
     }
     
     @available(*, unavailable, message: "Initializer unavailable")

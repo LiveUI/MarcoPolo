@@ -218,6 +218,12 @@ struct Layout {
         return view
     }
     
+    func printSafeInsets() {
+        if #available(iOS 11, *) {
+            print(element.safeAreaInsets)
+        }
+    }
+    
 }
 
 

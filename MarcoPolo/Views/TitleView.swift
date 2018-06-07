@@ -47,10 +47,31 @@ public class TitleView: UIView {
     public let titleLabel = ReportingLabel()
     public let subtitleLabel = ReportingLabel()
     
-    public var promptTitleMargin: CGFloat = 12
-    public var titleSubtitleMargin: CGFloat = 6
-    public var promptSubtitleMargin: CGFloat = 6
+    public var topMargin: CGFloat = 0 {
+        didSet {
+            makeSafeLayout()
+        }
+    }
     
+    public var promptTitleMargin: CGFloat = 6 {
+        didSet {
+            makeSafeLayout()
+        }
+    }
+    
+    public var titleSubtitleMargin: CGFloat = 6 {
+        didSet {
+            makeSafeLayout()
+        }
+    }
+    
+    public var promptSubtitleMargin: CGFloat = 6 {
+        didSet {
+            makeSafeLayout()
+        }
+    }
+    
+    var promptLabelTopConstraint: NSLayoutConstraint!
     var titleLabelTopConstraint: NSLayoutConstraint!
     var subtitleLabelTopConstraint: NSLayoutConstraint!
     
@@ -71,13 +92,22 @@ public class TitleView: UIView {
     
     // MARK: Layout
     
+    func makeSafeLayout() {
+        if superview != nil {
+            makeLayout()
+        }
+    }
+    
     func makeLayout() {
+        // Prompt
+        promptLabelTopConstraint.constant = promptLabel.text.isEmpty ? 0 : topMargin
+        
         // Title
         if !titleLabel.text.isEmpty {
             if !promptLabel.text.isEmpty {
                 titleLabelTopConstraint.constant = promptTitleMargin
             } else {
-                titleLabelTopConstraint.constant = 0
+                titleLabelTopConstraint.constant = topMargin
             }
         }
 
@@ -89,10 +119,10 @@ public class TitleView: UIView {
                 titleLabelTopConstraint.constant = 0
                 subtitleLabelTopConstraint.constant = promptSubtitleMargin
             } else {
-                subtitleLabelTopConstraint.constant = 0
+                subtitleLabelTopConstraint.constant = topMargin
             }
         } else {
-            subtitleLabelTopConstraint.constant =  0
+            subtitleLabelTopConstraint.constant = topMargin
         }
 
         layoutIfNeeded()
@@ -113,20 +143,20 @@ public class TitleView: UIView {
         
         // Prompt
         promptLabel.textAlignment = .center
-        promptLabel.font = UIFont.systemFont(ofSize: 11)
+        promptLabel.font = UIFont.systemFont(ofSize: 12)
         promptLabel.textColor = .darkGray
         promptLabel.numberOfLines = 0
         promptLabel.textDidChange = { text in
             self.makeLayout()
         }
         addSubview(promptLabel)
-        promptLabel.layout.pinTopToSuperview()
+        promptLabelTopConstraint = promptLabel.layout.pinTopToSuperview()
         promptLabel.layout.pinHorizontalEdgesToSuperView()
         promptLabel.layout.makeBottomLessThanOrEqualToSuperview()
         
         // Title
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
         titleLabel.textColor = .darkText
         titleLabel.numberOfLines = 0
         titleLabel.textDidChange = { text in
@@ -139,7 +169,7 @@ public class TitleView: UIView {
         
         // Subtitle
         subtitleLabel.textAlignment = .center
-        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subtitleLabel.font = UIFont.systemFont(ofSize: 13)
         subtitleLabel.textColor = .darkGray
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textDidChange = { text in

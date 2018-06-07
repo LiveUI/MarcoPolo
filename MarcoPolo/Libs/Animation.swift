@@ -43,19 +43,19 @@ public struct Animation {
     public static var none = Animation(storage: .none)
     
     /// Default (paralax) animation on push, previously used one on pop
-    public static func `default`(duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .default(duration)) }
+    public static func `default`(_ duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .default(duration)) }
     
     /// Paralax animation
-    public static func paralax(duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .paralax(duration)) }
+    public static func paralax(_ duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .paralax(duration)) }
     
     /// Move alongside
-    public static func move(duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .move(duration)) }
+    public static func move(_ duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .move(duration)) }
     
     /// Bounce on screen
     public static var bounce = Animation(storage: .bounce)
     
     /// Go over the current view controller
-    public static func over(duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .over(duration)) }
+    public static func over(_ duration: TimeInterval = 0.3) -> Animation { return Animation(storage: .over(duration)) }
     
     // TODO: Add closure based custom animation!!!
     
