@@ -12,19 +12,6 @@
 
 open class NavigationBar: UIView {
     
-    /// Layout subviews
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        layout.printSafeInsets()
-        
-        if #available(iOS 11, *) {
-            topConstraint?.constant = (safeAreaInsets.top + topMargin)
-        } else {
-            topConstraint?.constant = topMargin
-        }
-    }
-    
     /// Top margin below status bar safe area
     public var topMargin: CGFloat {
         didSet {
@@ -39,22 +26,30 @@ open class NavigationBar: UIView {
     /// Navigation bar min height
     var minHeightConstraint: NSLayoutConstraint?
     
+    /// Minimum height of the navigation bar
     public var minHeight: CGFloat {
         didSet {
             minHeightConstraint?.constant = minHeight
         }
     }
     
+    /// Navigation view controller reference
     var navigationViewController: NavigationViewController?
     
     /// Background view, always on the bottom
     public var backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+    
+    /// Title view (you can override with customTitleView)
     public var titleView: TitleView? {
         get {
             return customTitleView as? TitleView
         }
     }
-    public var _customTitleView: UIView?
+    
+    /// Private storage for `customTitleView`
+    private var _customTitleView: UIView?
+    
+    /// By setting `customTitleView` you override `titleView`
     public var customTitleView: UIView? {
         get { return _customTitleView }
         set {
@@ -67,17 +62,56 @@ open class NavigationBar: UIView {
             }
             _customTitleView = view
             
-            view.layout.centerVertically()
-            view.layout.pinHorizontalEdgesToSuperView(left: 30, right: 30)
-            view.layout.makeBottomLessThanOrEqualToSuperview(margin: -6)
+            view.layout.centerY()
+            view.layout.sides(left: 30, right: 30)
+            view.layout.bottomLessThanOrEqual(margin: -6)
         }
     }
     
     /// Content view
     public var contentView = UIView()
     
-    // MARK: Initialization
+    // MARK: Layout
     
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if #available(iOS 11, *) {
+            topConstraint?.constant = (safeAreaInsets.top + topMargin)
+        } else {
+            topConstraint?.constant = topMargin
+        }
+    }
+    
+    // MARK: Initialization & setup
+    
+    /// Setup background view
+    private func setupBackground() {
+        backgroundColor = .clear
+        
+        backgroundView.tintColor = .white
+        addSubview(backgroundView)
+        backgroundView.layout.fill()
+    }
+    
+    /// Setup content view
+    private func setupContentView() {
+        addSubview(contentView)
+        topConstraint = contentView.layout.top()
+        contentView.layout.sides()
+        minHeightConstraint = contentView.layout.min(height: minHeight)
+        contentView.layout.bottomLessThanOrEqual()
+    }
+    
+    /// Setup title view
+    private func setupTitleView() {
+        let titleView = TitleView()
+        titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+        contentView.addSubview(titleView)
+        customTitleView = titleView
+    }
+    
+    /// Designated initializer
     public init(minHeight: CGFloat = 44) {
         self.minHeight = minHeight
         
@@ -90,28 +124,12 @@ open class NavigationBar: UIView {
         
         super.init(frame: .zero)
         
-        // Background
-        backgroundColor = .clear
-        backgroundView.tintColor = .white
-        addSubview(backgroundView)
-        backgroundView.layout.fillSuperview()
-        
-        // Content view
-        addSubview(contentView)
-        topConstraint = contentView.layout.pinTopToSuperview()
-        contentView.layout.pinHorizontalEdgesToSuperView()
-        minHeightConstraint = contentView.layout.min(height: minHeight)
-        contentView.layout.makeBottomLessThanOrEqualToSuperview()
-        
-        // Title view
-        let titleView = TitleView()
-        titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
-        contentView.addSubview(titleView)
-        customTitleView = titleView
-        
-        layout.printSafeInsets()
+        setupBackground()
+        setupContentView()
+        setupTitleView()
     }
     
+    /// Not implemented
     @available(*, unavailable, message: "Initializer unavailable")
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -11,6 +11,7 @@ import Foundation
 
 extension Optional where Wrapped == String {
     
+    /// Is optional string empty?
     var isEmpty: Bool {
         guard let string = self else {
             return true

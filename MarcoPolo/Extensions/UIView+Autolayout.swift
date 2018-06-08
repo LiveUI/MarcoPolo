@@ -10,6 +10,7 @@
 @_exported import UIKit
 
 
+/// Internal layout helper
 struct Layout {
     
     let element: UIView
@@ -20,7 +21,7 @@ struct Layout {
     
     // MARK: Layout
     
-    @discardableResult func pinHorizontalEdgesToSuperView(left: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func sides(left: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(left)-[view]-(right)-|",
                                                          options: NSLayoutFormatOptions(rawValue: 0),
                                                         metrics: ["left": left, "right": right],
@@ -29,7 +30,7 @@ struct Layout {
         return constraints
     }
     
-    @discardableResult func pinVerticalEdgesToSuperView(top: CGFloat = 0, bottom: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func vertical(top: CGFloat = 0, bottom: CGFloat = 0) -> [NSLayoutConstraint] {
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(top)-[view]-(bottom)-|",
                                                          options: NSLayoutFormatOptions(rawValue: 0),
                                                         metrics: ["top": top, "bottom": bottom],
@@ -38,23 +39,23 @@ struct Layout {
         return constraints
     }
     
-    @discardableResult func centerVertically() -> NSLayoutConstraint {
+    @discardableResult func centerX() -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
-                                            attribute: .centerY,
+                                            attribute: .centerX,
                                             relatedBy: .equal,
                                             toItem: safeSuperview(),
-                                            attribute: .centerY,
+                                            attribute: .centerX,
                                             multiplier: 1.0, constant: 0)
         safeSuperview().addConstraint(constraint)
         return constraint
     }
     
-    @discardableResult func centerHorizontally() -> NSLayoutConstraint {
+    @discardableResult func centerY() -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
-                                            attribute: .centerX,
+                                            attribute: .centerY,
                                             relatedBy: .equal,
                                             toItem: safeSuperview(),
-                                            attribute: .centerX,
+                                            attribute: .centerY,
                                             multiplier: 1.0, constant: 0)
         safeSuperview().addConstraint(constraint)
         return constraint
@@ -104,7 +105,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinWidthToSuperview(width constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func matchWidthToSuperview(width constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .width,
                                             relatedBy: .equal,
@@ -115,7 +116,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinLeadingToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func leading(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .leading,
                                             relatedBy: .equal,
@@ -127,7 +128,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTrailingToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func trailing(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .trailing,
                                             relatedBy: .equal,
@@ -138,7 +139,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTopToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func top(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,
                                             relatedBy: .equal,
@@ -149,7 +150,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTopToView(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func top(toView view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,
                                             relatedBy: .equal,
@@ -160,7 +161,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinTopToBottom(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func top(toBottom view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,
                                             relatedBy: .equal,
@@ -171,7 +172,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func pinBottomToView(view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func match(bottomTo view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .bottom,
                                             relatedBy: .equal,
@@ -182,7 +183,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func makeBottomLessThanOrEqualToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func bottomLessThanOrEqual(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .bottom,
                                             relatedBy: .lessThanOrEqual,
@@ -193,7 +194,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func makeBottomGreaterThanOrEqualToSuperview(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func bottomGreaterThanOrEqual(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .bottom,
                                             relatedBy: .greaterThanOrEqual,
@@ -204,12 +205,18 @@ struct Layout {
         return constraint
     }
     
-    func fillSuperview(padding: CGFloat = 0) {
-        safeSuperview()
-        pinHorizontalEdgesToSuperView(left: padding, right: padding)
-        pinVerticalEdgesToSuperView(top: padding, bottom: padding)
+    /// Fill the whole view
+    func fill(_ padding: CGFloat) {
+        fill(top: padding, left: padding, right: padding, bottom: padding)
     }
     
+    func fill(top: CGFloat = 0, left: CGFloat = 0, right: CGFloat = 0, bottom: CGFloat = 0) {
+        safeSuperview()
+        sides(left: left, right: right)
+        vertical(top: top, bottom: bottom)
+    }
+    
+    /// Configures superview for autolayout and returns it
     @discardableResult private func safeSuperview() -> UIView {
         element.translatesAutoresizingMaskIntoConstraints = false
         guard let view = element.superview else {
@@ -218,6 +225,7 @@ struct Layout {
         return view
     }
     
+    /// Print the `safeAreaInsets` into the console
     func printSafeInsets() {
         if #available(iOS 11, *) {
             print(element.safeAreaInsets)
@@ -229,7 +237,7 @@ struct Layout {
 
 extension UIView {
     
-    /// Custom autolayout library
+    /// Internal custom autolayout helper
     var layout: Layout {
         return Layout(self)
     }

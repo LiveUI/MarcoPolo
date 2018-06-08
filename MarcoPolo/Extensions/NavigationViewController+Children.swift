@@ -11,10 +11,11 @@
 
 extension NavigationViewController {
     
-    func updateSafeArea() {
+    /// Set save area on all involved view controllers
+    internal func updateSafeArea() {
         if #available(iOS 11.0, *) {
             for c in viewControllers {
-                // TODO: Fix 6, THE MAGIC NUMBER!!!!
+                // TODO: Update only active view controllers!
                 c.additionalSafeAreaInsets.top = navigationBar.bounds.height - view.safeAreaInsets.top
             }
         }
@@ -22,9 +23,9 @@ extension NavigationViewController {
     
     /// Set constraints to satisfy a view
     func setConstraints(on viewController: UIViewController) -> NSLayoutConstraint {
-        viewController.view.layout.pinVerticalEdgesToSuperView()
-        viewController.view.layout.pinWidthToSuperview()
-        return viewController.view.layout.pinLeadingToSuperview()
+        viewController.view.layout.vertical()
+        viewController.view.layout.matchWidthToSuperview()
+        return viewController.view.layout.leading()
     }
     
     /// Remove view controller from the stack

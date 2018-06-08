@@ -10,18 +10,23 @@
 @_exported import UIKit
 
 
+/// Back arrow type
 public enum BackArrow {
     
+    /// Bold arrow
     case bold
     
+    /// Regular arrow
     case regular
     
+    /// Light arrow
     case light
     
 }
 
 extension BackArrow {
     
+    /// Convert arrow type to an image
     public func asView() -> BackArrowView {
         return BackArrowView(self)
     }
@@ -29,23 +34,27 @@ extension BackArrow {
 }
 
 
+/// Back arrow view
 public class BackArrowView: UIView {
     
+    /// Style
     public var style: BackArrow {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// Set color
     public var color: UIColor? {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// Designated initializer
     init(_ style: BackArrow = .regular) {
         self.style = style
-        super.init(frame: .zero)
+        super.init(frame: CGRect(x: 0, y: 0, width: 15, height: 25))
     }
     
     @available(*, unavailable, message: "Initializer unavailable")
@@ -53,6 +62,7 @@ public class BackArrowView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Draw rectangle
     public override func draw(_ rect: CGRect) {
         let bezierPath = UIBezierPath()
         switch style {

@@ -12,12 +12,14 @@
 
 extension NavigationViewController {
     
+    /// Register new manager for a view controller
     func register(managerFor viewController: UIViewController, animation: Animation) {
         let manager = NavigationManager()
         manager.animation = animation
         navigationManagers[ObjectIdentifier(viewController)] = manager
     }
     
+    /// Remove navigation manager
     func remove(managerFor viewController: UIViewController) {
         navigationManagers.removeValue(forKey: ObjectIdentifier(viewController))
     }

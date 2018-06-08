@@ -30,6 +30,7 @@ extension NavigationViewController {
         }
         set {
             _viewControllers = newValue
+            // TODO: Clean managers registry!!!
         }
     }
     

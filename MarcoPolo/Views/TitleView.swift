@@ -10,8 +10,10 @@
 @_exported import UIKit
 
 
+/// Title view
 public class TitleView: UIView {
     
+    /// Content data model
     public final class Content {
         
         var titleView: TitleView?
@@ -43,40 +45,49 @@ public class TitleView: UIView {
         
     }
     
+    /// Prompt label (positioned on the top)
     public let promptLabel = ReportingLabel()
+    
+    /// Title label (positioned in the middle)
     public let titleLabel = ReportingLabel()
+    
+    /// Subtitle label (positioned at the bottom)
     public let subtitleLabel = ReportingLabel()
     
-    public var topMargin: CGFloat = 0 {
-        didSet {
-            makeSafeLayout()
-        }
-    }
-    
+    /// Space between prompt and title (default is 6px)
     public var promptTitleMargin: CGFloat = 6 {
         didSet {
             makeSafeLayout()
         }
     }
     
+    /// Space between title and subtitle (default is 6px)
     public var titleSubtitleMargin: CGFloat = 6 {
         didSet {
             makeSafeLayout()
         }
     }
     
+    /// Space between prompt and subtitle (default is 6px)
     public var promptSubtitleMargin: CGFloat = 6 {
         didSet {
             makeSafeLayout()
         }
     }
     
-    var promptLabelTopConstraint: NSLayoutConstraint!
-    var titleLabelTopConstraint: NSLayoutConstraint!
-    var subtitleLabelTopConstraint: NSLayoutConstraint!
+    /// Prompt top constraint
+    private var promptLabelTopConstraint: NSLayoutConstraint!
     
-    var disableLayout: Bool = false
+    /// Title top constraint
+    private var titleLabelTopConstraint: NSLayoutConstraint!
     
+    /// Subtitle top constraint
+    private var subtitleLabelTopConstraint: NSLayoutConstraint!
+    
+    /// Disable layouting temporarily
+    private var disableLayout: Bool = false
+    
+    /// Content for the title view
     public var content: Content? {
         didSet {
             disableLayout = true
@@ -92,22 +103,24 @@ public class TitleView: UIView {
     
     // MARK: Layout
     
-    func makeSafeLayout() {
+    /// Make layout only if on superview
+    private func makeSafeLayout() {
         if superview != nil {
             makeLayout()
         }
     }
     
-    func makeLayout() {
+    /// Layout based on content
+    private func makeLayout() {
         // Prompt
-        promptLabelTopConstraint.constant = promptLabel.text.isEmpty ? 0 : topMargin
+        promptLabelTopConstraint.constant = 0
         
         // Title
         if !titleLabel.text.isEmpty {
             if !promptLabel.text.isEmpty {
                 titleLabelTopConstraint.constant = promptTitleMargin
             } else {
-                titleLabelTopConstraint.constant = topMargin
+                titleLabelTopConstraint.constant = 0
             }
         }
 
@@ -119,14 +132,16 @@ public class TitleView: UIView {
                 titleLabelTopConstraint.constant = 0
                 subtitleLabelTopConstraint.constant = promptSubtitleMargin
             } else {
-                subtitleLabelTopConstraint.constant = topMargin
+                subtitleLabelTopConstraint.constant = 0
             }
         } else {
-            subtitleLabelTopConstraint.constant = topMargin
+            subtitleLabelTopConstraint.constant = 0
         }
 
         layoutIfNeeded()
     }
+    
+    // MARK: View lifecycle
     
     public override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
@@ -136,12 +151,10 @@ public class TitleView: UIView {
         }
     }
     
-    // MARK: Initialization
+    // MARK: Initialization & setup
     
-    public init() {
-        super.init(frame: .zero)
-        
-        // Prompt
+    /// Setup prompt label
+    private func setupPrompt() {
         promptLabel.textAlignment = .center
         promptLabel.font = UIFont.systemFont(ofSize: 12)
         promptLabel.textColor = .darkGray
@@ -150,11 +163,13 @@ public class TitleView: UIView {
             self.makeLayout()
         }
         addSubview(promptLabel)
-        promptLabelTopConstraint = promptLabel.layout.pinTopToSuperview()
-        promptLabel.layout.pinHorizontalEdgesToSuperView()
-        promptLabel.layout.makeBottomLessThanOrEqualToSuperview()
-        
-        // Title
+        promptLabelTopConstraint = promptLabel.layout.top()
+        promptLabel.layout.sides()
+        promptLabel.layout.bottomLessThanOrEqual()
+    }
+    
+    /// Setup title label
+    private func setupTitle() {
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
         titleLabel.textColor = .darkText
@@ -163,11 +178,13 @@ public class TitleView: UIView {
             self.makeLayout()
         }
         addSubview(titleLabel)
-        titleLabelTopConstraint = titleLabel.layout.pinTopToBottom(view: promptLabel)
-        titleLabel.layout.pinHorizontalEdgesToSuperView()
-        titleLabel.layout.makeBottomLessThanOrEqualToSuperview()
-        
-        // Subtitle
+        titleLabelTopConstraint = titleLabel.layout.top(toBottom: promptLabel)
+        titleLabel.layout.sides()
+        titleLabel.layout.bottomLessThanOrEqual()
+    }
+    
+    /// Setup subtitle label
+    private func setupSubtitle() {
         subtitleLabel.textAlignment = .center
         subtitleLabel.font = UIFont.systemFont(ofSize: 13)
         subtitleLabel.textColor = .darkGray
@@ -176,11 +193,21 @@ public class TitleView: UIView {
             self.makeLayout()
         }
         addSubview(subtitleLabel)
-        subtitleLabelTopConstraint = subtitleLabel.layout.pinTopToBottom(view: titleLabel)
-        subtitleLabel.layout.pinHorizontalEdgesToSuperView()
-        subtitleLabel.layout.makeBottomLessThanOrEqualToSuperview()
+        subtitleLabelTopConstraint = subtitleLabel.layout.top(toBottom: titleLabel)
+        subtitleLabel.layout.sides()
+        subtitleLabel.layout.bottomLessThanOrEqual()
     }
     
+    /// Designated initializer
+    public init() {
+        super.init(frame: .zero)
+        
+        setupPrompt()
+        setupTitle()
+        setupSubtitle()
+    }
+    
+    /// Not implemented
     @available(*, unavailable, message: "Initializer unavailable")
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

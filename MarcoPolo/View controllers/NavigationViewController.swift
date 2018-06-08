@@ -43,8 +43,8 @@ open class NavigationViewController: UIViewController {
         // Navigation bar
         navigationBar = NavigationBar(minHeight: 44)
         view.addSubview(navigationBar)
-        navigationBar.layout.pinHorizontalEdgesToSuperView()
-        navigationBar.layout.pinTopToSuperview()
+        navigationBar.layout.sides()
+        navigationBar.layout.top()
         
         // Add the root view controller onto the scene
         register(managerFor: rootViewController, animation: .none)
@@ -63,6 +63,7 @@ open class NavigationViewController: UIViewController {
         rootViewController.navigationViewController = self
     }
     
+    /// Not implemented
     @available(*, unavailable, message: "Initializer unavailable")
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

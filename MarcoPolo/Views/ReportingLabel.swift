@@ -10,10 +10,13 @@
 @_exported import UIKit
 
 
+/// Label with internal text observation callback
 public class ReportingLabel: UILabel {
     
-    var textDidChange: ((String?) -> Void)?
+    /// Callback
+    internal var textDidChange: ((String?) -> Void)?
     
+    /// Set text override
     public override var text: String? {
         get { return super.text }
         set {
