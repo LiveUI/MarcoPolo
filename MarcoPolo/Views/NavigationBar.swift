@@ -12,6 +12,7 @@
 
 open class NavigationBar: UIView {
     
+    /// Layout subviews
     open override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -32,20 +33,22 @@ open class NavigationBar: UIView {
         }
     }
     
+    /// Top constraint of the content view
     var topConstraint: NSLayoutConstraint?
     
-    var navigationBarHeight: NSLayoutConstraint!
+    /// Navigation bar min height
+    var minHeightConstraint: NSLayoutConstraint?
     
     public var minHeight: CGFloat {
         didSet {
-            navigationBarHeight.constant = minHeight
+            minHeightConstraint?.constant = minHeight
         }
     }
     
     var navigationViewController: NavigationViewController?
     
-    /// Background view, always on the bottom; Ideal for
-    public var backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    /// Background view, always on the bottom
+    public var backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
     public var titleView: TitleView? {
         get {
             return customTitleView as? TitleView
@@ -64,23 +67,18 @@ open class NavigationBar: UIView {
             }
             _customTitleView = view
             
-            topConstraint = view.layout.pinTopToSuperview()
+            view.layout.centerVertically()
             view.layout.pinHorizontalEdgesToSuperView(left: 30, right: 30)
             view.layout.makeBottomLessThanOrEqualToSuperview(margin: -6)
         }
     }
     
-    // MARK: Layout
-    
-    @available(*, unavailable, message: "Method unavailable")
-    open override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        navigationBarHeight = layout.min(height: minHeight)
-    }
+    /// Content view
+    public var contentView = UIView()
     
     // MARK: Initialization
     
-    public init(minHeight: CGFloat = 164.0) {
+    public init(minHeight: CGFloat = 44) {
         self.minHeight = minHeight
         
         // TODO: Check on an older device/iOS!!!!
@@ -92,15 +90,23 @@ open class NavigationBar: UIView {
         
         super.init(frame: .zero)
         
+        // Background
         backgroundColor = .clear
         backgroundView.tintColor = .white
-        
         addSubview(backgroundView)
         backgroundView.layout.fillSuperview()
         
+        // Content view
+        addSubview(contentView)
+        topConstraint = contentView.layout.pinTopToSuperview()
+        contentView.layout.pinHorizontalEdgesToSuperView()
+        minHeightConstraint = contentView.layout.min(height: minHeight)
+        contentView.layout.makeBottomLessThanOrEqualToSuperview()
+        
+        // Title view
         let titleView = TitleView()
         titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
-        addSubview(titleView)
+        contentView.addSubview(titleView)
         customTitleView = titleView
         
         layout.printSafeInsets()

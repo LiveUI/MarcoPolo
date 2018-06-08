@@ -15,8 +15,6 @@ open class NavigationViewController: UIViewController {
     /// Navigation bar
     public internal(set) var navigationBar: NavigationBar!
     
-    var navigationBarYPosition: NSLayoutConstraint!
-    
     /// Root view controller
     public let rootViewController: UIViewController
     
@@ -31,21 +29,24 @@ open class NavigationViewController: UIViewController {
     
     // MARK: View lifecycle
     
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        updateSafeArea()
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
-        // TODO: Fix following
-//        var safeAreaTop: CGFloat = 20.0
-//        if #available(iOS 11.0, *) {
-//            safeAreaTop = view.safeAreaInsets.top + 44.0
-//        }
-        navigationBar = NavigationBar(minHeight: 66)
+        // Navigation bar
+        navigationBar = NavigationBar(minHeight: 44)
         view.addSubview(navigationBar)
         navigationBar.layout.pinHorizontalEdgesToSuperView()
-        navigationBarYPosition = navigationBar.layout.pinTopToSuperview()
+        navigationBar.layout.pinTopToSuperview()
         
+        // Add the root view controller onto the scene
         register(managerFor: rootViewController, animation: .none)
         add(childViewController: rootViewController)
         change(navigationItemFrom: rootViewController, animationTime: 0.0)

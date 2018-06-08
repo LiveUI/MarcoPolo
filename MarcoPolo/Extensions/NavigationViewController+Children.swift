@@ -13,8 +13,9 @@ extension NavigationViewController {
     
     func updateSafeArea() {
         if #available(iOS 11.0, *) {
-            for _ in viewControllers {
-                //vc.additionalSafeAreaInsets.top = navigationBar.minHeight - vc.view.safeAreaInsets.top
+            for c in viewControllers {
+                // TODO: Fix 6, THE MAGIC NUMBER!!!!
+                c.additionalSafeAreaInsets.top = navigationBar.bounds.height - view.safeAreaInsets.top
             }
         }
     }
@@ -40,6 +41,7 @@ extension NavigationViewController {
         childViewController.didMove(toParentViewController: self)
         view.bringSubview(toFront: navigationBar)
         childViewController.navigationManager?.leftConstraint = setConstraints(on: childViewController)
+        
         updateSafeArea()
     }
 

@@ -13,7 +13,7 @@
 extension NavigationViewController {
     
     func change(navigationItemFrom viewController: UIViewController, animationTime: TimeInterval) {
-        navigationBar.titleView?.content = viewController.navigation.content
+        viewController.navigation.activate(navigationBar)
     }
     
 }

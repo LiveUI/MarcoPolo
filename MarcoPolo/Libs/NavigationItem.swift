@@ -6,10 +6,20 @@
 //  Copyright © 2018 LiveUI. All rights reserved.
 //
 
-import Foundation
+@_exported import Foundation
+@_exported import UIKit
 
 
 public class NavigationItem {
+    
+    /// Navigation bar reference
+    private var navigationBar: NavigationBar?
+    
+    /// Left (bar button) items
+    public var leftItems: [UIView] = []
+    
+    /// Right (bar button) items
+    public var rightItems: [UIView] = []
     
     /// Private interface for title views content
     private var _content: TitleView.Content?
@@ -25,6 +35,12 @@ public class NavigationItem {
             return content
         }
         set { _content = newValue }
+    }
+    
+    /// Activate navigation item
+    func activate(_ navigationBar: NavigationBar) {
+        navigationBar.titleView?.content = content
+        self.navigationBar = navigationBar
     }
     
 }

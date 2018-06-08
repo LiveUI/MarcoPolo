@@ -15,6 +15,8 @@
 		1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7A20C8973600E8F111 /* String+Tools.swift */; };
 		1531DE7D20C9400E00E8F111 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7C20C9400E00E8F111 /* TableViewCell.swift */; };
 		1531DE8020C94C7F00E8F111 /* NavigationViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */; };
+		1531DE8220CA9B7100E8F111 /* NavigationItem+LeftItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE8120CA9B7100E8F111 /* NavigationItem+LeftItems.swift */; };
+		1531DE8420CA9BB000E8F111 /* NavigationItem+RightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE8320CA9BB000E8F111 /* NavigationItem+RightItem.swift */; };
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
 		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		1531DE7A20C8973600E8F111 /* String+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
 		1531DE7C20C9400E00E8F111 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+NavBar.swift"; sourceTree = "<group>"; };
+		1531DE8120CA9B7100E8F111 /* NavigationItem+LeftItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItem+LeftItems.swift"; sourceTree = "<group>"; };
+		1531DE8320CA9BB000E8F111 /* NavigationItem+RightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItem+RightItem.swift"; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,7 +219,8 @@
 		15A1175A20C72CA300CE4263 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */,
+				1531DE8120CA9B7100E8F111 /* NavigationItem+LeftItems.swift */,
+				1531DE8320CA9BB000E8F111 /* NavigationItem+RightItem.swift */,
 				1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */,
 				15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */,
 				15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */,
@@ -225,6 +230,7 @@
 				15A1175D20C72D0900CE4263 /* NavigationViewController+Push.swift */,
 				15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */,
 				15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */,
+				15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */,
 				1531DE7A20C8973600E8F111 /* String+Tools.swift */,
 			);
 			path = Extensions;
@@ -448,9 +454,11 @@
 				15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */,
 				15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */,
 				15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */,
+				1531DE8420CA9BB000E8F111 /* NavigationItem+RightItem.swift in Sources */,
 				1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */,
 				15A1176920C73D0B00CE4263 /* NavigationManager.swift in Sources */,
 				15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */,
+				1531DE8220CA9B7100E8F111 /* NavigationItem+LeftItems.swift in Sources */,
 				1531DE7520C878DC00E8F111 /* NavigationItem.swift in Sources */,
 				1531DE7720C888CE00E8F111 /* TitleView.swift in Sources */,
 				15A1176D20C7483400CE4263 /* BackArrow.swift in Sources */,

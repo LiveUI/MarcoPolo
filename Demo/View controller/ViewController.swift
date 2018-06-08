@@ -23,6 +23,7 @@ class ViewController: PresentableTableViewController {
             let infoSection = PresentableSection()
             infoSection.append(Presentable<TableViewCell>.create({ cell in
                 cell.textLabel?.numberOfLines = 0
+                cell.backgroundColor = .red
                 cell.textLabel?.text = """
                 Safe area:
                     - top: \(self.view.safeAreaInsets.top)
