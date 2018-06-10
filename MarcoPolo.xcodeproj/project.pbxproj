@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1531DE6F20C875A900E8F111 /* MarcoPolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* MarcoPolo.framework */; };
 		1531DE7020C875A900E8F111 /* MarcoPolo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1172F20C728DD00CE4263 /* MarcoPolo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1531DE7520C878DC00E8F111 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7420C878DC00E8F111 /* NavigationItem.swift */; };
 		1531DE7720C888CE00E8F111 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7620C888CE00E8F111 /* TitleView.swift */; };
 		1531DE7920C88D2600E8F111 /* ReportingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7820C88D2600E8F111 /* ReportingLabel.swift */; };
 		1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7A20C8973600E8F111 /* String+Tools.swift */; };
@@ -17,6 +16,10 @@
 		1531DE8020C94C7F00E8F111 /* NavigationViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */; };
 		1531DE8220CA9B7100E8F111 /* NavigationItem+LeftItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE8120CA9B7100E8F111 /* NavigationItem+LeftItems.swift */; };
 		1531DE8420CA9BB000E8F111 /* NavigationItem+RightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1531DE8320CA9BB000E8F111 /* NavigationItem+RightItem.swift */; };
+		1531DE8620CDC1B100E8F111 /* MarcoPolo.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1531DE8520CDC1B100E8F111 /* MarcoPolo.podspec */; };
+		156AD83020CDCA00002672A4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82A20CDC9D4002672A4 /* Animation.swift */; };
+		156AD83120CDCA00002672A4 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82B20CDC9D4002672A4 /* NavigationManager.swift */; };
+		156AD83220CDCA00002672A4 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82C20CDC9D4002672A4 /* NavigationItem.swift */; };
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
 		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
@@ -28,12 +31,10 @@
 		15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */; };
 		15A1176320C7354200CE4263 /* NavigationViewController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */; };
 		15A1176620C73CBF00CE4263 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176520C73CBF00CE4263 /* NavigationBar.swift */; };
-		15A1176920C73D0B00CE4263 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176820C73D0B00CE4263 /* NavigationManager.swift */; };
 		15A1176B20C73F4C00CE4263 /* NavigationViewController+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176A20C73F4C00CE4263 /* NavigationViewController+Disabled.swift */; };
 		15A1176D20C7483400CE4263 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176C20C7483400CE4263 /* BackArrow.swift */; };
 		15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */; };
 		15A1177220C7E2DA00CE4263 /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */; };
-		15A1177420C7E79900CE4263 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1177320C7E79900CE4263 /* Animation.swift */; };
 		15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */; };
 		15A1182620C7EC5500CE4263 /* NavigationViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */; };
 		15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */; };
@@ -66,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		0E0F41C2D38CE15DAF4E53D4 /* Pods-NavCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavCon.release.xcconfig"; path = "Pods/Target Support Files/Pods-NavCon/Pods-NavCon.release.xcconfig"; sourceTree = "<group>"; };
-		1531DE7420C878DC00E8F111 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 		1531DE7620C888CE00E8F111 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		1531DE7820C88D2600E8F111 /* ReportingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingLabel.swift; sourceTree = "<group>"; };
 		1531DE7A20C8973600E8F111 /* String+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
@@ -74,6 +74,10 @@
 		1531DE7F20C94C7F00E8F111 /* NavigationViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+NavBar.swift"; sourceTree = "<group>"; };
 		1531DE8120CA9B7100E8F111 /* NavigationItem+LeftItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItem+LeftItems.swift"; sourceTree = "<group>"; };
 		1531DE8320CA9BB000E8F111 /* NavigationItem+RightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItem+RightItem.swift"; sourceTree = "<group>"; };
+		1531DE8520CDC1B100E8F111 /* MarcoPolo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MarcoPolo.podspec; sourceTree = "<group>"; };
+		156AD82A20CDC9D4002672A4 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		156AD82B20CDC9D4002672A4 /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		156AD82C20CDC9D4002672A4 /* NavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,12 +93,10 @@
 		15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Access.swift"; sourceTree = "<group>"; };
 		15A1176220C7354200CE4263 /* NavigationViewController+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Pop.swift"; sourceTree = "<group>"; };
 		15A1176520C73CBF00CE4263 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		15A1176820C73D0B00CE4263 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		15A1176A20C73F4C00CE4263 /* NavigationViewController+Disabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Disabled.swift"; sourceTree = "<group>"; };
 		15A1176C20C7483400CE4263 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
 		15A1176E20C7E1E700CE4263 /* NavigationViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Children.swift"; sourceTree = "<group>"; };
 		15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
-		15A1177320C7E79900CE4263 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		15A1182320C7EB5900CE4263 /* NavigationViewController+Managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Managers.swift"; sourceTree = "<group>"; };
 		15A1182520C7EC5500CE4263 /* NavigationViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationViewController+Animations.swift"; sourceTree = "<group>"; };
 		15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
@@ -144,11 +146,33 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1546772720CDC7C700E593B8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				156AD82920CDC9D4002672A4 /* Libs */,
+				15A1176420C73CAE00CE4263 /* Views */,
+				15A1175A20C72CA300CE4263 /* Extensions */,
+				15A1175220C729B900CE4263 /* View controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		156AD82920CDC9D4002672A4 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				156AD82A20CDC9D4002672A4 /* Animation.swift */,
+				156AD82B20CDC9D4002672A4 /* NavigationManager.swift */,
+				156AD82C20CDC9D4002672A4 /* NavigationItem.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		15A1172520C728DD00CE4263 = {
 			isa = PBXGroup;
 			children = (
 				15A1182920C819F400CE4263 /* Configuration */,
 				15A1173F20C7292D00CE4263 /* Demo */,
+				1546772720CDC7C700E593B8 /* Classes */,
 				15A1173120C728DD00CE4263 /* MarcoPolo */,
 				15A1173020C728DD00CE4263 /* Products */,
 				25D97EA597B488B0FDEDB85B /* Pods */,
@@ -168,10 +192,6 @@
 		15A1173120C728DD00CE4263 /* MarcoPolo */ = {
 			isa = PBXGroup;
 			children = (
-				15A1176720C73CF900CE4263 /* Libs */,
-				15A1176420C73CAE00CE4263 /* Views */,
-				15A1175A20C72CA300CE4263 /* Extensions */,
-				15A1175220C729B900CE4263 /* View controllers */,
 				15A1175120C7294F00CE4263 /* Supporting files */,
 			);
 			path = MarcoPolo;
@@ -255,16 +275,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		15A1176720C73CF900CE4263 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				15A1176820C73D0B00CE4263 /* NavigationManager.swift */,
-				15A1177320C7E79900CE4263 /* Animation.swift */,
-				1531DE7420C878DC00E8F111 /* NavigationItem.swift */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
 		15A1177020C7E2CB00CE4263 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +286,7 @@
 		15A1182920C819F400CE4263 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				1531DE8520CDC1B100E8F111 /* MarcoPolo.podspec */,
 				15A1182A20C81A0800CE4263 /* README.md */,
 				15A1182D20C81A0800CE4263 /* LICENSE */,
 				15A1182C20C81A0800CE4263 /* Podfile */,
@@ -398,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1531DE8620CDC1B100E8F111 /* MarcoPolo.podspec in Resources */,
 				15A1174B20C7292F00CE4263 /* LaunchScreen.storyboard in Resources */,
 				15A1174820C7292F00CE4263 /* Assets.xcassets in Resources */,
 			);
@@ -449,23 +461,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A1177420C7E79900CE4263 /* Animation.swift in Sources */,
 				1531DE8020C94C7F00E8F111 /* NavigationViewController+NavBar.swift in Sources */,
 				15A1182820C7F08E00CE4263 /* UIView+Autolayout.swift in Sources */,
 				15A1176020C72D6500CE4263 /* UIViewController+Access.swift in Sources */,
 				15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */,
 				1531DE8420CA9BB000E8F111 /* NavigationItem+RightItem.swift in Sources */,
 				1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */,
-				15A1176920C73D0B00CE4263 /* NavigationManager.swift in Sources */,
 				15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */,
 				1531DE8220CA9B7100E8F111 /* NavigationItem+LeftItems.swift in Sources */,
-				1531DE7520C878DC00E8F111 /* NavigationItem.swift in Sources */,
 				1531DE7720C888CE00E8F111 /* TitleView.swift in Sources */,
+				156AD83120CDCA00002672A4 /* NavigationManager.swift in Sources */,
 				15A1176D20C7483400CE4263 /* BackArrow.swift in Sources */,
 				15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */,
+				156AD83220CDCA00002672A4 /* NavigationItem.swift in Sources */,
 				15A1176320C7354200CE4263 /* NavigationViewController+Pop.swift in Sources */,
 				15A1176B20C73F4C00CE4263 /* NavigationViewController+Disabled.swift in Sources */,
 				1531DE7920C88D2600E8F111 /* ReportingLabel.swift in Sources */,
+				156AD83020CDCA00002672A4 /* Animation.swift in Sources */,
 				15A1175C20C72CB900CE4263 /* NavigationViewController+Stack.swift in Sources */,
 				15A1175E20C72D0900CE4263 /* NavigationViewController+Push.swift in Sources */,
 				15A1176620C73CBF00CE4263 /* NavigationBar.swift in Sources */,
