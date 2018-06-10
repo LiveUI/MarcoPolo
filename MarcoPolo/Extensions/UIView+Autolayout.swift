@@ -139,6 +139,29 @@ struct Layout {
         return constraint
     }
     
+    @discardableResult func next(_ view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .leading,
+                                            relatedBy: .equal,
+                                            toItem: view,
+                                            attribute: .trailing,
+                                            multiplier: 1, constant: constant)
+        
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func before(_ view: UIView, margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .trailing,
+                                            relatedBy: .equal,
+                                            toItem: view,
+                                            attribute: .leading,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
     @discardableResult func top(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .top,

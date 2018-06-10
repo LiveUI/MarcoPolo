@@ -10,7 +10,14 @@
 @_exported import UIKit
 
 
+/// Navigation bar view
 open class NavigationBar: UIView {
+    
+    /// Left (bar button) items content view
+    private let leftItemsContentView = UIView()
+    
+    /// Right (bar button) items content view
+    private let rightItemsContentView = UIView()
     
     /// Top margin below status bar safe area
     public var topMargin: CGFloat {
@@ -63,7 +70,8 @@ open class NavigationBar: UIView {
             _customTitleView = view
             
             view.layout.centerY()
-            view.layout.sides(left: 30, right: 30)
+            view.layout.next(leftItemsContentView, margin: 6)
+            view.layout.before(rightItemsContentView, margin: -6)
             view.layout.bottomLessThanOrEqual(margin: -6)
         }
     }
@@ -95,12 +103,29 @@ open class NavigationBar: UIView {
     }
     
     /// Setup content view
-    private func setupContentView() {
+    private func setupContentViews() {
+        // Main content
         addSubview(contentView)
         topConstraint = contentView.layout.top()
         contentView.layout.sides()
         minHeightConstraint = contentView.layout.min(height: minHeight)
         contentView.layout.bottomLessThanOrEqual()
+        
+        // Left items
+        leftItemsContentView.backgroundColor = .red
+        contentView.addSubview(leftItemsContentView)
+        leftItemsContentView.layout.leading()
+        leftItemsContentView.layout.width(50)
+        leftItemsContentView.layout.height(44)
+        leftItemsContentView.layout.centerY()
+        
+        // Right items
+        rightItemsContentView.backgroundColor = .orange
+        contentView.addSubview(rightItemsContentView)
+        rightItemsContentView.layout.trailing()
+        rightItemsContentView.layout.width(50)
+        rightItemsContentView.layout.height(44)
+        rightItemsContentView.layout.centerY()
     }
     
     /// Setup title view
@@ -125,7 +150,7 @@ open class NavigationBar: UIView {
         super.init(frame: .zero)
         
         setupBackground()
-        setupContentView()
+        setupContentViews()
         setupTitleView()
     }
     
