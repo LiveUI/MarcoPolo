@@ -50,12 +50,12 @@ extension NavigationItem {
     }
     
     /// Add left (bar button) item
-    public func add(leftItem item: UIView, animation: Animation = .basic) {
-        leftItems.append(item)
-        if let navigationBar = navigationBar {
-            navigationBar.leadingItemsContentView.add(item: item, animation: animation)
-        }
-    }
+//    public func add(leftItem item: UIView, animation: Animation = .basic) {
+//        leftItems.append(item)
+//        if let navigationBar = navigationBar {
+//            navigationBar.leadingItemsContentView.add(item: item, animation: animation)
+//        }
+//    }
     
     /// Add back button
     @discardableResult func set(backButton: UIButton, animation: Animation = .basic) -> UIButton {

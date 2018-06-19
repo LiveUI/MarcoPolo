@@ -50,11 +50,11 @@ extension NavigationItem {
     }
     
     /// Add right (bar button) item
-    public func add(rightItem item: UIView, animation: Animation = .basic) {
-        rightItems.append(item)
-        if let navigationBar = navigationBar {
-            navigationBar.trailingItemsContentView.add(item: item, animation: animation)
-        }
-    }
+//    public func add(rightItem item: UIView, animation: Animation = .basic) {
+//        rightItems.append(item)
+//        if let navigationBar = navigationBar {
+//            navigationBar.trailingItemsContentView.add(item: item, animation: animation)
+//        }
+//    }
     
 }
