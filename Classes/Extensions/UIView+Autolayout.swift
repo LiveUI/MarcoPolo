@@ -111,6 +111,28 @@ struct Layout {
         return constraint
     }
     
+    @discardableResult func match(minWidth view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .width,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: view,
+                                            attribute: .width,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func match(minHeight view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .height,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: view,
+                                            attribute: .height,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
     @discardableResult func width(_ constant: CGFloat) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .width,

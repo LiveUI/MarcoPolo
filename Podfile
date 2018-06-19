@@ -6,4 +6,5 @@ target 'Demo' do
     use_frameworks!
     
     pod 'Presentables', '~> 0.6.7'
+    pod 'AwesomeEnum'
 end

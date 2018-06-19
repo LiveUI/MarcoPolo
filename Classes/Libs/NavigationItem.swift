@@ -12,6 +12,17 @@
 
 public class NavigationItem {
     
+    /// Navigation (bar button) item animation type
+    public enum Animation {
+        
+        /// No animation
+        case none
+        
+        /// Basic animation (fade)
+        case basic
+        
+    }
+    
     /// Navigation bar reference
     var navigationBar: NavigationBar?
     
@@ -55,6 +66,8 @@ public class NavigationItem {
                 navigationBar.leadingItemsContentView.set(items: viewController.navigation.leftItems, animation: .none)
             }
         }
+        
+        navigationBar.trailingItemsContentView.set(items: viewController.navigation.rightItems, animation: .none)
     }
     
 }

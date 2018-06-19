@@ -12,6 +12,7 @@ import UIKit
 
 class BarItemsContentView: UIView {
     
+    // TODO: Change following to leading/trailing!!!
     /// Position on the navigation bar
     enum Position {
         
@@ -74,6 +75,7 @@ class BarItemsContentView: UIView {
         items.forEach { view in
             addSubview(view)
             view.layout.centerY()
+            layout.match(minHeight: view)
             
             // Place next to the previous view
             if let previousView = previousView {
@@ -81,7 +83,7 @@ class BarItemsContentView: UIView {
                 case .left:
                     view.layout.next(previousView, margin: spacing)
                 case .right:
-                    view.layout.before(previousView, margin: spacing)
+                    view.layout.before(previousView, margin: -spacing)
                 }
             } else {
                 switch position {
@@ -96,7 +98,7 @@ class BarItemsContentView: UIView {
             if x == items.count {
                 switch position {
                 case .left:
-                    view.layout.match(maxWidth: self)
+                    view.layout.trailing()
                 case .right:
                     view.layout.leading()
                 }

@@ -13,6 +13,7 @@
 /// Back arrow type
 public class BackArrow {
     
+    /// Internal storage
     enum Storage {
         
         /// Bold arrow
@@ -26,23 +27,10 @@ public class BackArrow {
         
     }
     
+    /// Internal storage
     let storage: Storage
     
-    private var _color: UIColor?
-    public var color: UIColor {
-        get {
-            guard let color = _color else {
-                guard let color = UIButton().tintColor else {
-                    fatalError("There should always be color!!!")
-                }
-                _color = color
-                return color
-            }
-            return color
-        }
-        set { _color = newValue }
-    }
-    
+    /// Initializer
     init(_ value: Storage) {
         storage = value
     }
@@ -61,10 +49,9 @@ public class BackArrow {
 extension BackArrow {
     
     /// Convert arrow type to an image button
-    public func asButton() -> UIButton {
+    public func asButton(color: UIColor? = nil) -> UIButton {
         let button = UIButton()
-        button.setImage(image(), for: .normal)
-        button.backgroundColor = .green
+        button.setImage(image(color: (color ?? button.tintColor)), for: .normal)
         button.sizeToFit()
         if button.bounds.size.width < 36 {
             button.bounds.size.width = 36
@@ -76,7 +63,7 @@ extension BackArrow {
     }
     
     /// Image representation of the arrow
-    public func image() -> UIImage? {
+    public func image(color: UIColor) -> UIImage? {
         let bezierPath = UIBezierPath()
         switch storage {
         case .light:
@@ -122,9 +109,8 @@ extension BackArrow {
 
         }
         bezierPath.close()
-        color.setFill()
         
-        return bezierPath.fill(imageOfSize: CGSize(width: 15, height: 25))
+        return bezierPath.fill(imageOfSize: CGSize(width: 15, height: 25), color: color)
     }
     
 }

@@ -24,6 +24,7 @@
 		157D35C020D90B46005C01D1 /* BarItemsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */; };
 		157D35C320D955BC005C01D1 /* Array+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35C120D954E9005C01D1 /* Array+UIView.swift */; };
 		157D35C620D95F88005C01D1 /* UIBezierPath+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35C420D95F85005C01D1 /* UIBezierPath+Tools.swift */; };
+		157D35C820D99D79005C01D1 /* UIImage+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35C720D99D79005C01D1 /* UIImage+Button.swift */; };
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
 		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
@@ -86,6 +87,7 @@
 		157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemsContentView.swift; sourceTree = "<group>"; };
 		157D35C120D954E9005C01D1 /* Array+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UIView.swift"; sourceTree = "<group>"; };
 		157D35C420D95F85005C01D1 /* UIBezierPath+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Tools.swift"; sourceTree = "<group>"; };
+		157D35C720D99D79005C01D1 /* UIImage+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Button.swift"; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -279,10 +281,10 @@
 			children = (
 				157D35BA20D9021D005C01D1 /* NavigationBarShadow.swift */,
 				15A1176520C73CBF00CE4263 /* NavigationBar.swift */,
+				157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */,
 				15A1176C20C7483400CE4263 /* BackArrow.swift */,
 				1531DE7620C888CE00E8F111 /* TitleView.swift */,
 				1531DE7820C88D2600E8F111 /* ReportingLabel.swift */,
-				157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				15A1177120C7E2DA00CE4263 /* UIColor+Tools.swift */,
+				157D35C720D99D79005C01D1 /* UIImage+Button.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,10 +440,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AwesomeEnum/AwesomeEnum.framework",
 				"${BUILT_PRODUCTS_DIR}/Presentables/Presentables.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AwesomeEnum.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentables.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +512,7 @@
 			files = (
 				15A1177220C7E2DA00CE4263 /* UIColor+Tools.swift in Sources */,
 				1531DE7D20C9400E00E8F111 /* TableViewCell.swift in Sources */,
+				157D35C820D99D79005C01D1 /* UIImage+Button.swift in Sources */,
 				15A1174320C7292D00CE4263 /* ViewController.swift in Sources */,
 				15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */,
 			);
@@ -713,7 +719,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 295E1CE45F00EC56280D31C0 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8ZGADY96;
@@ -733,7 +738,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E45D8000F19FF5D54DD6503 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8ZGADY96;

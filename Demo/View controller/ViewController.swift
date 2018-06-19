@@ -8,6 +8,7 @@
 
 import UIKit
 import Presentables
+import AwesomeEnum
 
 
 class ViewController: PresentableTableViewController {
@@ -18,22 +19,6 @@ class ViewController: PresentableTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if #available(iOS 11.0, *) {
-            let infoSection = PresentableSection()
-            infoSection.append(Presentable<TableViewCell>.create({ cell in
-                cell.textLabel?.numberOfLines = 0
-                cell.backgroundColor = .red
-                cell.textLabel?.text = """
-                Safe area:
-                    - top: \(self.view.safeAreaInsets.top)
-                    - left: \(self.view.safeAreaInsets.left)
-                    - right: \(self.view.safeAreaInsets.right)
-                    - bottom: \(self.view.safeAreaInsets.bottom)
-                """
-            }))
-            data.append(infoSection)
-        }
         
         let section = PresentableSection()
         section.append(Presentable<TableViewCell>.create({ cell in
@@ -109,18 +94,8 @@ class ViewController: PresentableTableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("viewWillAppear")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisappear")
-    }
-    
     // MARK: Initialization
-
+ 
     /// Initializer
     init(_ level: Int = 0) {
         self.level = level
@@ -129,7 +104,19 @@ class ViewController: PresentableTableViewController {
         
         navigation.content.prompt = "MarcoPolo"
         navigation.content.title = "Level \(level)"
-        navigation.content.subtitle = "You can change the level using the interface below"
+        navigation.content.subtitle = "You can change the level and other parameters using the interface below!"
+        
+        // Left navigation
+        if level == 0 {
+            navigation.set(leftItem: Awesome.regular.handSpock.asButton())
+        }
+        
+        // Right navigation
+        navigation.set(rightItems: [
+            Awesome.regular.chartBar.asButton(),
+            Awesome.regular.addressBook.asButton()
+            ]
+        )
     }
 
     /// Not implemented

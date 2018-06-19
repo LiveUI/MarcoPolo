@@ -95,7 +95,8 @@ open class NavigationBar: UIView {
             
             view.layout.centerY()
             view.layout.centerX().priority = .defaultLow
-            // TODO: Finish leading/trailing transformation so that the back button appears on the right place
+            // TODO: Finish leading/trailing transformation so that the back button appears on the right place!!!
+            //  (probably just by switching the two views below?) :)
             view.layout.next(leadingItemsContentView, margin: 6)
             view.layout.before(trailingItemsContentView, margin: -6)
             view.layout.bottomLessThanOrEqual(margin: -6)
@@ -147,26 +148,21 @@ open class NavigationBar: UIView {
         contentView.layout.bottomLessThanOrEqual()
         
         // Left items
-        leadingItemsContentView.backgroundColor = .red
         contentView.addSubview(leadingItemsContentView)
         leadingItemsContentView.layout.leading()
-        leadingItemsContentView.layout.min(width: 0)
-        leadingItemsContentView.layout.matchHeightToSuperview()
+//        leadingItemsContentView.layout.matchHeightToSuperview()
         leadingItemsContentView.layout.centerY()
         
         // Right items
-        trailingItemsContentView.backgroundColor = .orange
         contentView.addSubview(trailingItemsContentView)
         trailingItemsContentView.layout.trailing()
-        trailingItemsContentView.layout.min(width: 0)
-        trailingItemsContentView.layout.matchHeightToSuperview()
+//        trailingItemsContentView.layout.matchHeightToSuperview()
         trailingItemsContentView.layout.centerY()
     }
     
     /// Setup title view
     private func setupTitleView() {
         let titleView = TitleView()
-        titleView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
         contentView.addSubview(titleView)
         customTitleView = titleView
     }

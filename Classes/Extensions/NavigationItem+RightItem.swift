@@ -10,18 +10,8 @@
 @_exported import UIKit
 
 
+// TODO: Change to leading/trailing
 extension NavigationItem {
-    
-    /// Navigation (bar button) item animation type
-    public enum Animation {
-        
-        /// No animation
-        case none
-        
-        /// Basic animation (fade)
-        case basic
-        
-    }
     
     /// Right (bar button) item
     public var rightItem: UIView? {

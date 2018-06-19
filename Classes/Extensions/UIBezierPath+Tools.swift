@@ -12,8 +12,9 @@ import UIKit
 
 extension UIBezierPath {
     
-    func fill(imageOfSize size: CGSize) -> UIImage? {
+    func fill(imageOfSize size: CGSize, color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
         fill()
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

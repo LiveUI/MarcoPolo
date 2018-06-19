@@ -10,6 +10,7 @@
 @_exported import UIKit
 
 
+// TODO: Change to leading/trailing
 extension NavigationItem {
     
     /// Left (bar button) item
@@ -63,8 +64,8 @@ extension NavigationItem {
     }
     
     /// Add back button with arrow style
-    @discardableResult func set(backButton: BackArrow, animation: Animation = .basic) -> UIButton {
-        return set(backButton: backButton.asButton(), animation: animation)
+    @discardableResult func set(backButton: BackArrow, color: UIColor? = nil, animation: Animation = .basic) -> UIButton {
+        return set(backButton: backButton.asButton(color: color), animation: animation)
     }
     
 }

@@ -17,6 +17,10 @@ extension Array where Element: UIView {
         forEach { $0.removeFromSuperview() }
     }
     
+    func removeAllConstraints() {
+        forEach { $0.removeConstraints($0.constraints) }
+    }
+    
     /// Set alpha on all views
     func alpha(_ value: CGFloat) {
         forEach { $0.alpha = value }
