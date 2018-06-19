@@ -24,10 +24,16 @@ struct Layout {
     @discardableResult func sides(left: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(left)-[view]-(right)-|",
                                                          options: NSLayoutFormatOptions(rawValue: 0),
-                                                        metrics: ["left": left, "right": right],
-                                                        views: ["view": element])
+                                                         metrics: ["left": left, "right": right],
+                                                         views: ["view": element])
         safeSuperview().addConstraints(constraints)
         return constraints
+    }
+    
+    func minSides(left: CGFloat = 0, right: CGFloat = 0) {
+        element.layout.centerX()
+        element.layout.minLeading()
+        element.layout.minTrailing()
     }
     
     @discardableResult func vertical(top: CGFloat = 0, bottom: CGFloat = 0) -> [NSLayoutConstraint] {
@@ -83,7 +89,29 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func width(_ constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func match(maxWidth view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .width,
+                                            relatedBy: .lessThanOrEqual,
+                                            toItem: view,
+                                            attribute: .width,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func match(maxHeight view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .height,
+                                            relatedBy: .lessThanOrEqual,
+                                            toItem: view,
+                                            attribute: .height,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func width(_ constant: CGFloat) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .width,
                                             relatedBy: .equal,
@@ -94,7 +122,7 @@ struct Layout {
         return constraint
     }
     
-    @discardableResult func height(_ constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult func height(_ constant: CGFloat) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .height,
                                             relatedBy: .equal,
@@ -116,6 +144,17 @@ struct Layout {
         return constraint
     }
     
+    @discardableResult func matchHeightToSuperview(width constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .height,
+                                            relatedBy: .equal,
+                                            toItem: safeSuperview(),
+                                            attribute: .height,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
     @discardableResult func leading(margin constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .leading,
@@ -132,6 +171,29 @@ struct Layout {
         let constraint = NSLayoutConstraint(item: element,
                                             attribute: .trailing,
                                             relatedBy: .equal,
+                                            toItem: safeSuperview(),
+                                            attribute: .trailing,
+                                            multiplier: 1, constant: constant)
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func minLeading(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .leading,
+                                            relatedBy: .greaterThanOrEqual,
+                                            toItem: safeSuperview(),
+                                            attribute: .leading,
+                                            multiplier: 1, constant: constant)
+        
+        safeSuperview().addConstraint(constraint)
+        return constraint
+    }
+    
+    @discardableResult func minTrailing(margin constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: element,
+                                            attribute: .trailing,
+                                            relatedBy: .greaterThanOrEqual,
                                             toItem: safeSuperview(),
                                             attribute: .trailing,
                                             multiplier: 1, constant: constant)

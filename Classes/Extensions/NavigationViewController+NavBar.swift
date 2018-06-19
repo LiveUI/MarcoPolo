@@ -14,7 +14,7 @@ extension NavigationViewController {
     
     /// Change navigation item
     func change(navigationItemFrom viewController: UIViewController, animationTime: TimeInterval) {
-        viewController.navigation.activate(navigationBar)
+        viewController.navigation.activate(navigationBar, on: viewController)
     }
     
 }

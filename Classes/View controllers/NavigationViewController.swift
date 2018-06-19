@@ -42,6 +42,7 @@ open class NavigationViewController: UIViewController {
         
         // Navigation bar
         navigationBar = NavigationBar(minHeight: 44)
+        navigationBar.navigationViewController = self
         view.addSubview(navigationBar)
         navigationBar.layout.sides()
         navigationBar.layout.top()
@@ -67,6 +68,12 @@ open class NavigationViewController: UIViewController {
     @available(*, unavailable, message: "Initializer unavailable")
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Actions
+    
+    @objc public func goBack(_ sender: Any) {
+        popViewController()
     }
     
 }

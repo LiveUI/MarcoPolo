@@ -13,11 +13,35 @@
 /// Navigation bar view
 open class NavigationBar: UIView {
     
-    /// Left (bar button) items content view
-    private let leftItemsContentView = UIView()
+    /// Leading (left bar button) items content view
+    let leadingItemsContentView = BarItemsContentView(.left)
     
-    /// Right (bar button) items content view
-    private let rightItemsContentView = UIView()
+    /// Trailing (right bar button) items content view
+    let trailingItemsContentView = BarItemsContentView(.right)
+    
+    /// Leading (left bar button) items spacing
+    public var leftItemsSpacing: CGFloat {
+        get { return leadingItemsContentView.spacing }
+        set { leadingItemsContentView.spacing = newValue }
+    }
+    
+    /// Trailing (right bar button) items spacing
+    public var trailingFirstItemSpacing: CGFloat {
+        get { return trailingItemsContentView.firstItemSpacing }
+        set { trailingItemsContentView.firstItemSpacing = newValue }
+    }
+    
+    /// Leading (left bar button) items spacing
+    public var leftFirstItemSpacing: CGFloat {
+        get { return leadingItemsContentView.firstItemSpacing }
+        set { leadingItemsContentView.firstItemSpacing = newValue }
+    }
+    
+    /// Trailing (right bar button) items spacing
+    public var trailingItemsSpacing: CGFloat {
+        get { return trailingItemsContentView.spacing }
+        set { trailingItemsContentView.spacing = newValue }
+    }
     
     /// Top margin below status bar safe area
     public var topMargin: CGFloat {
@@ -41,7 +65,7 @@ open class NavigationBar: UIView {
     }
     
     /// Navigation view controller reference
-    var navigationViewController: NavigationViewController?
+    var navigationViewController: NavigationViewController!
     
     /// Background view, always on the bottom
     public var backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
@@ -70,14 +94,25 @@ open class NavigationBar: UIView {
             _customTitleView = view
             
             view.layout.centerY()
-            view.layout.next(leftItemsContentView, margin: 6)
-            view.layout.before(rightItemsContentView, margin: -6)
+            view.layout.centerX().priority = .defaultLow
+            // TODO: Finish leading/trailing transformation so that the back button appears on the right place
+            view.layout.next(leadingItemsContentView, margin: 6)
+            view.layout.before(trailingItemsContentView, margin: -6)
             view.layout.bottomLessThanOrEqual(margin: -6)
         }
     }
     
     /// Content view
     public var contentView = UIView()
+    
+    /// Shadow
+    public let shadowView = NavigationBarShadow()
+    
+    /// Toggle shadow
+    public var hasShadow: Bool {
+        set { clipsToBounds = !newValue }
+        get { return !clipsToBounds }
+    }
     
     // MARK: Layout
     
@@ -112,20 +147,20 @@ open class NavigationBar: UIView {
         contentView.layout.bottomLessThanOrEqual()
         
         // Left items
-        leftItemsContentView.backgroundColor = .red
-        contentView.addSubview(leftItemsContentView)
-        leftItemsContentView.layout.leading()
-        leftItemsContentView.layout.width(50)
-        leftItemsContentView.layout.height(44)
-        leftItemsContentView.layout.centerY()
+        leadingItemsContentView.backgroundColor = .red
+        contentView.addSubview(leadingItemsContentView)
+        leadingItemsContentView.layout.leading()
+        leadingItemsContentView.layout.min(width: 0)
+        leadingItemsContentView.layout.matchHeightToSuperview()
+        leadingItemsContentView.layout.centerY()
         
         // Right items
-        rightItemsContentView.backgroundColor = .orange
-        contentView.addSubview(rightItemsContentView)
-        rightItemsContentView.layout.trailing()
-        rightItemsContentView.layout.width(50)
-        rightItemsContentView.layout.height(44)
-        rightItemsContentView.layout.centerY()
+        trailingItemsContentView.backgroundColor = .orange
+        contentView.addSubview(trailingItemsContentView)
+        trailingItemsContentView.layout.trailing()
+        trailingItemsContentView.layout.min(width: 0)
+        trailingItemsContentView.layout.matchHeightToSuperview()
+        trailingItemsContentView.layout.centerY()
     }
     
     /// Setup title view
@@ -136,11 +171,19 @@ open class NavigationBar: UIView {
         customTitleView = titleView
     }
     
+    /// Setup shadow
+    private func setupShadowView() {
+        addSubview(shadowView)
+        shadowView.layout.top(toBottom: self)
+        shadowView.layout.sides()
+        shadowView.layout.height(6)
+    }
+    
     /// Designated initializer
     public init(minHeight: CGFloat = 44) {
         self.minHeight = minHeight
         
-        // TODO: Check on an older device/iOS!!!!
+        // TODO: Check on older devices/iOS!!!!
         if #available(iOS 11, *) {
             topMargin = 6
         } else {
@@ -152,6 +195,7 @@ open class NavigationBar: UIView {
         setupBackground()
         setupContentViews()
         setupTitleView()
+        setupShadowView()
     }
     
     /// Not implemented

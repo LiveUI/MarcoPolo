@@ -13,7 +13,7 @@
 public class NavigationItem {
     
     /// Navigation bar reference
-    private var navigationBar: NavigationBar?
+    var navigationBar: NavigationBar?
     
     /// Left (bar button) items
     public var leftItems: [UIView] = []
@@ -38,9 +38,23 @@ public class NavigationItem {
     }
     
     /// Activate navigation item
-    func activate(_ navigationBar: NavigationBar) {
+    func activate(_ navigationBar: NavigationBar, on viewController: UIViewController) {
+        if content.title == nil {
+            content.title = viewController.title
+        }
         navigationBar.titleView?.content = content
         self.navigationBar = navigationBar
+        
+        if viewController == navigationBar.navigationViewController.rootViewController {
+            navigationBar.leadingItemsContentView.set(items: viewController.navigation.leftItems, animation: .none)
+        } else {
+            let count = navigationBar.navigationViewController.viewControllers.count
+            if viewController.navigation.leftItems.isEmpty && count > 1 {
+                viewController.navigation.set(backButton: .regular(), animation: .none).addTarget(navigationBar.navigationViewController, action: #selector(NavigationViewController.goBack(_:)), for: .touchUpInside)
+            } else {
+                navigationBar.leadingItemsContentView.set(items: viewController.navigation.leftItems, animation: .none)
+            }
+        }
     }
     
 }

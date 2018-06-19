@@ -164,7 +164,7 @@ public class TitleView: UIView {
         }
         addSubview(promptLabel)
         promptLabelTopConstraint = promptLabel.layout.top()
-        promptLabel.layout.sides()
+        promptLabel.layout.minSides()
         promptLabel.layout.bottomLessThanOrEqual()
     }
     
@@ -179,7 +179,7 @@ public class TitleView: UIView {
         }
         addSubview(titleLabel)
         titleLabelTopConstraint = titleLabel.layout.top(toBottom: promptLabel)
-        titleLabel.layout.sides()
+        titleLabel.layout.minSides()
         titleLabel.layout.bottomLessThanOrEqual()
     }
     
@@ -194,7 +194,7 @@ public class TitleView: UIView {
         }
         addSubview(subtitleLabel)
         subtitleLabelTopConstraint = subtitleLabel.layout.top(toBottom: titleLabel)
-        subtitleLabel.layout.sides()
+        subtitleLabel.layout.minSides()
         subtitleLabel.layout.bottomLessThanOrEqual()
     }
     

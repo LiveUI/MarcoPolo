@@ -11,61 +11,74 @@
 
 
 /// Back arrow type
-public enum BackArrow {
+public class BackArrow {
+    
+    enum Storage {
+        
+        /// Bold arrow
+        case bold(UIColor?)
+        
+        /// Regular arrow
+        case regular(UIColor?)
+        
+        /// Light arrow
+        case light(UIColor?)
+        
+    }
+    
+    let storage: Storage
+    
+    private var _color: UIColor?
+    public var color: UIColor {
+        get {
+            guard let color = _color else {
+                guard let color = UIButton().tintColor else {
+                    fatalError("There should always be color!!!")
+                }
+                _color = color
+                return color
+            }
+            return color
+        }
+        set { _color = newValue }
+    }
+    
+    init(_ value: Storage) {
+        storage = value
+    }
     
     /// Bold arrow
-    case bold
+    public static func bold(_ color: UIColor? = nil) -> BackArrow { return .init(.bold(color)) }
     
     /// Regular arrow
-    case regular
+    public static func regular(_ color: UIColor? = nil) -> BackArrow { return .init(.regular(color)) }
     
     /// Light arrow
-    case light
+    public static func light(_ color: UIColor? = nil) -> BackArrow { return .init(.light(color)) }
     
 }
 
 extension BackArrow {
     
-    /// Convert arrow type to an image
-    public func asView() -> BackArrowView {
-        return BackArrowView(self)
-    }
-    
-}
-
-
-/// Back arrow view
-public class BackArrowView: UIView {
-    
-    /// Style
-    public var style: BackArrow {
-        didSet {
-            setNeedsDisplay()
+    /// Convert arrow type to an image button
+    public func asButton() -> UIButton {
+        let button = UIButton()
+        button.setImage(image(), for: .normal)
+        button.backgroundColor = .green
+        button.sizeToFit()
+        if button.bounds.size.width < 36 {
+            button.bounds.size.width = 36
         }
-    }
-    
-    /// Set color
-    public var color: UIColor? {
-        didSet {
-            setNeedsDisplay()
+        if button.bounds.size.height < 36 {
+            button.bounds.size.height = 36
         }
+        return button
     }
     
-    /// Designated initializer
-    init(_ style: BackArrow = .regular) {
-        self.style = style
-        super.init(frame: CGRect(x: 0, y: 0, width: 15, height: 25))
-    }
-    
-    @available(*, unavailable, message: "Initializer unavailable")
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    /// Draw rectangle
-    public override func draw(_ rect: CGRect) {
+    /// Image representation of the arrow
+    public func image() -> UIImage? {
         let bezierPath = UIBezierPath()
-        switch style {
+        switch storage {
         case .light:
             bezierPath.move(to: CGPoint(x: 14.34, y: 24.8))
             bezierPath.addLine(to: CGPoint(x: 14.78, y: 24.41))
@@ -109,8 +122,9 @@ public class BackArrowView: UIView {
 
         }
         bezierPath.close()
-        (color ?? tintColor).setFill()
-        bezierPath.fill()
+        color.setFill()
+        
+        return bezierPath.fill(imageOfSize: CGSize(width: 15, height: 25))
     }
     
 }

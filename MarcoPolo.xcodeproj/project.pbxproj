@@ -20,6 +20,10 @@
 		156AD83020CDCA00002672A4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82A20CDC9D4002672A4 /* Animation.swift */; };
 		156AD83120CDCA00002672A4 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82B20CDC9D4002672A4 /* NavigationManager.swift */; };
 		156AD83220CDCA00002672A4 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AD82C20CDC9D4002672A4 /* NavigationItem.swift */; };
+		157D35BD20D902B1005C01D1 /* NavigationBarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35BA20D9021D005C01D1 /* NavigationBarShadow.swift */; };
+		157D35C020D90B46005C01D1 /* BarItemsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */; };
+		157D35C320D955BC005C01D1 /* Array+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35C120D954E9005C01D1 /* Array+UIView.swift */; };
+		157D35C620D95F88005C01D1 /* UIBezierPath+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D35C420D95F85005C01D1 /* UIBezierPath+Tools.swift */; };
 		15A1173420C728DD00CE4263 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A1173220C728DD00CE4263 /* NavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15A1174120C7292D00CE4263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174020C7292D00CE4263 /* AppDelegate.swift */; };
 		15A1174320C7292D00CE4263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1174220C7292D00CE4263 /* ViewController.swift */; };
@@ -78,6 +82,10 @@
 		156AD82A20CDC9D4002672A4 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		156AD82B20CDC9D4002672A4 /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		156AD82C20CDC9D4002672A4 /* NavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
+		157D35BA20D9021D005C01D1 /* NavigationBarShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarShadow.swift; sourceTree = "<group>"; };
+		157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemsContentView.swift; sourceTree = "<group>"; };
+		157D35C120D954E9005C01D1 /* Array+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UIView.swift"; sourceTree = "<group>"; };
+		157D35C420D95F85005C01D1 /* UIBezierPath+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Tools.swift"; sourceTree = "<group>"; };
 		15A1172F20C728DD00CE4263 /* MarcoPolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarcoPolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A1173220C728DD00CE4263 /* NavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		15A1173320C728DD00CE4263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,6 +260,8 @@
 				15A1175F20C72D6500CE4263 /* UIViewController+Access.swift */,
 				15A1182720C7F08E00CE4263 /* UIView+Autolayout.swift */,
 				1531DE7A20C8973600E8F111 /* String+Tools.swift */,
+				157D35C120D954E9005C01D1 /* Array+UIView.swift */,
+				157D35C420D95F85005C01D1 /* UIBezierPath+Tools.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,10 +277,12 @@
 		15A1176420C73CAE00CE4263 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				157D35BA20D9021D005C01D1 /* NavigationBarShadow.swift */,
 				15A1176520C73CBF00CE4263 /* NavigationBar.swift */,
 				15A1176C20C7483400CE4263 /* BackArrow.swift */,
 				1531DE7620C888CE00E8F111 /* TitleView.swift */,
 				1531DE7820C88D2600E8F111 /* ReportingLabel.swift */,
+				157D35BE20D90A30005C01D1 /* BarItemsContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,7 +479,10 @@
 				15A1175420C729D500CE4263 /* NavigationViewController.swift in Sources */,
 				1531DE8420CA9BB000E8F111 /* NavigationItem+RightItem.swift in Sources */,
 				1531DE7B20C8973600E8F111 /* String+Tools.swift in Sources */,
+				157D35C020D90B46005C01D1 /* BarItemsContentView.swift in Sources */,
+				157D35C620D95F88005C01D1 /* UIBezierPath+Tools.swift in Sources */,
 				15A1176F20C7E1E700CE4263 /* NavigationViewController+Children.swift in Sources */,
+				157D35BD20D902B1005C01D1 /* NavigationBarShadow.swift in Sources */,
 				1531DE8220CA9B7100E8F111 /* NavigationItem+LeftItems.swift in Sources */,
 				1531DE7720C888CE00E8F111 /* TitleView.swift in Sources */,
 				156AD83120CDCA00002672A4 /* NavigationManager.swift in Sources */,
@@ -475,6 +490,7 @@
 				15A1182420C7EB5900CE4263 /* NavigationViewController+Managers.swift in Sources */,
 				156AD83220CDCA00002672A4 /* NavigationItem.swift in Sources */,
 				15A1176320C7354200CE4263 /* NavigationViewController+Pop.swift in Sources */,
+				157D35C320D955BC005C01D1 /* Array+UIView.swift in Sources */,
 				15A1176B20C73F4C00CE4263 /* NavigationViewController+Disabled.swift in Sources */,
 				1531DE7920C88D2600E8F111 /* ReportingLabel.swift in Sources */,
 				156AD83020CDCA00002672A4 /* Animation.swift in Sources */,
