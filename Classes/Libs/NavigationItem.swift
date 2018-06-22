@@ -48,6 +48,9 @@ public class NavigationItem {
         set { _content = newValue }
     }
     
+    /// Navigation view controller
+    public internal(set) var navigationController: NavigationViewController?
+    
     /// Activate navigation item
     func activate(_ navigationBar: NavigationBar, on viewController: UIViewController) {
         if content.title == nil {

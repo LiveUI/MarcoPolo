@@ -21,7 +21,7 @@ extension NavigationViewController {
         
         register(managerFor: viewController, animation: animation)
         
-        viewController.navigationViewController = self
+        viewController.navigation.navigationController = self
         viewControllers.append(viewController)
         
         add(childViewController: viewController)

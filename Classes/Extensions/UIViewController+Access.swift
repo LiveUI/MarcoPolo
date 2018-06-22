@@ -34,20 +34,20 @@ extension UIViewController {
     
     /// [MarcoPolo] Navigation manager (only available to pushed view controllers)
     var navigationManager: NavigationManager? {
-        return navigationViewController?.navigationManagers[ObjectIdentifier(self)]
+        return navigation.navigationController?.navigationManagers[ObjectIdentifier(self)]
     }
     
-    /// [MarcoPolo] Navigation view controller (only available to pushed view controllers)
-    public internal(set) var navigationViewController: NavigationViewController? {
-        get {
-            guard let c = objc_getAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle) as? NavigationViewController else {
-                return nil
-            }
-            return c
-        }
-        set {
-            objc_setAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
+//    /// [MarcoPolo] Navigation view controller (only available to pushed view controllers)
+//    public internal(set) var navigationViewController: NavigationViewController? {
+//        get {
+//            guard let c = objc_getAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle) as? NavigationViewController else {
+//                return nil
+//            }
+//            return c
+//        }
+//        set {
+//            objc_setAssociatedObject(self, &NavigationViewControllerAssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+//        }
+//    }
     
 }

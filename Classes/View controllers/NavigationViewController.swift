@@ -61,7 +61,7 @@ open class NavigationViewController: UIViewController {
         
         super.init(nibName: nil, bundle: nil)
         
-        rootViewController.navigationViewController = self
+        rootViewController.navigation.navigationController = self
     }
     
     /// Not implemented
