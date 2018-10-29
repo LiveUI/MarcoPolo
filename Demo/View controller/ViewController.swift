@@ -25,14 +25,14 @@ class ViewController: PresentableTableViewController {
             cell.textLabel?.text = "Push to level: \((self.level + 1))"
             cell.accessoryType = .disclosureIndicator
         }).cellSelected {
-            self.navigationViewController?.push(viewController: ViewController(self.level + 1), animation: .paralax(1))
+            self.navigation.navigationController?.push(viewController: ViewController(self.level + 1), animation: .paralax(1))
         })
         if level > 0 {
             section.append(Presentable<TableViewCell>.create({ cell in
                 cell.textLabel?.text = "Pop to level: \((self.level - 1))"
                 cell.accessoryType = .disclosureIndicator
             }).cellSelected {
-                self.navigationViewController?.popViewController(animation: .bounce)
+                self.navigation.navigationController?.popViewController(animation: .bounce)
             })
         }
         data.append(section)
