@@ -34,7 +34,7 @@ class BarItemsContentView: UIView {
     var firstItemSpacing: CGFloat = 12
     
     /// Items
-    private var items: [UIView] = []
+    var items: [UIView] = []
     
     /// Set items
     func set(items: [UIView], animation: NavigationItem.Animation) {
@@ -57,8 +57,12 @@ class BarItemsContentView: UIView {
     /// Initializer
     init(_ position: Position) {
         self.position = position
-        
+
         super.init(frame: .zero)
+        
+        self.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        self.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        
     }
     
     /// Not implemented
@@ -71,8 +75,11 @@ class BarItemsContentView: UIView {
     /// Layout all items
     private func layoutItems() {
         var previousView: UIView?
+
         var x: Int = 1
         items.forEach { view in
+            view.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+            view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
             addSubview(view)
             view.layout.centerY()
             layout.match(minHeight: view)
@@ -94,17 +101,17 @@ class BarItemsContentView: UIView {
                 }
             }
             
-            // Manage last item
+//            // Manage last item
             if x == items.count {
                 switch position {
                 case .left:
-                    view.layout.trailing()
+                    view.rightAnchor.constraint(lessThanOrEqualTo: self.rightAnchor).isActive = true
                 case .right:
-                    view.layout.leading()
+                    view.leftAnchor.constraint(greaterThanOrEqualTo: self.leftAnchor).isActive = true
                 }
             }
             
-            setSizeIfNeccessary(view)
+            //setSizeIfNeccessary(view)
             previousView = view
             x += 1
         }

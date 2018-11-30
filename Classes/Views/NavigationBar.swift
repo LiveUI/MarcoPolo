@@ -94,12 +94,10 @@ open class NavigationBar: UIView {
             _customTitleView = view
             
             view.layout.centerY()
-            view.layout.centerX().priority = .defaultLow
-            // TODO: Finish leading/trailing transformation so that the back button appears on the right place!!!
-            //  (probably just by switching the two views below?) :)
-            view.layout.next(leadingItemsContentView, margin: 6)
-            view.layout.before(trailingItemsContentView, margin: -6)
+            view.leftAnchor.constraint(equalTo: leadingItemsContentView.rightAnchor).isActive = true
+            view.rightAnchor.constraint(equalTo: trailingItemsContentView.leftAnchor).isActive = true
             view.layout.bottomLessThanOrEqual(margin: -6)
+            view.setContentHuggingPriority(.defaultLow, for: .horizontal)
         }
     }
     
@@ -150,14 +148,21 @@ open class NavigationBar: UIView {
         // Left items
         contentView.addSubview(leadingItemsContentView)
         leadingItemsContentView.layout.leading()
-//        leadingItemsContentView.layout.matchHeightToSuperview()
         leadingItemsContentView.layout.centerY()
         
         // Right items
         contentView.addSubview(trailingItemsContentView)
         trailingItemsContentView.layout.trailing()
-//        trailingItemsContentView.layout.matchHeightToSuperview()
         trailingItemsContentView.layout.centerY()
+        
+        if leadingItemsContentView.intrinsicContentSize.width > trailingItemsContentView.intrinsicContentSize.width {
+            leadingItemsContentView.widthAnchor.constraint(greaterThanOrEqualTo: trailingItemsContentView.widthAnchor, multiplier: 1.0).isActive = true
+
+        }else{
+            trailingItemsContentView.widthAnchor.constraint(greaterThanOrEqualTo: leadingItemsContentView.widthAnchor, multiplier: 1.0).isActive = true
+
+        }
+        
     }
     
     /// Setup title view
